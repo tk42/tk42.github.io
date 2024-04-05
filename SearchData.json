@@ -4,7 +4,7 @@ permalink: /SearchData.json
 
 {
   {%- assign i = 0 -%}
-  {%- for note in site.notes -%}
+  {%- for note in site.memos -%}
 
     "{{ i }}": {
        "doc":  {{ note.title | strip_html | escape | jsonify }},

@@ -45,7 +45,7 @@
                 {%- assign sidenote = itemparts[0] | split:sidenote_delimiter -%}
             
                 {%- if external_link[1] == nil -%}
-                    {%- assign result_posts = site.posts | where: 'title',itemparts[0] -%}  
+                    {%- assign result_posts = site.memos | where: 'title',itemparts[0] -%}  
                     {%- assign result_posts = site.notes | where: 'title',itemparts[0] -%}
                     {%- assign result_pages = site.pages | where: 'title',itemparts[0] -%}
                     {%- assign internal_links = internal_links | append: link_joiner_delimiter | append: internal_link -%}
@@ -74,7 +74,7 @@
             {%- else -%}
                     {%- assign post = site.notes | where: 'title',title -%}
                     {%- if post[0].title == nil -%}
-                    {%- assign post = site.posts | where: 'title',title -%}
+                    {%- assign post = site.memos | where: 'title',title -%}
                     {%- endif -%}
                     {%- assign excerpt = post[0].content | markdownify | strip_html | truncate: 200 | newline_to_br -%}
                     {%- if site.preferences.pagepreview.enabled -%}
