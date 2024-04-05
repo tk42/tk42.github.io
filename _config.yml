@@ -68,7 +68,7 @@ plugins:
 collections:
   notes:
     output: true
-    permalink: /note/:title
+    permalink: /memos/:title
 
 markdown: kramdown
 
@@ -88,7 +88,7 @@ defaults:
       type: posts
     values:
       layout: Post
-      permalink: /post/:title
+      permalink: /notes/:title
       content-type: post
   - scope:
       path: ""
@@ -106,9 +106,8 @@ defaults:
 # their entries' file path in the `include:` list.
 #
 exclude:
-  - _notes/000 Inbox
-  - _notes/200 Private
-  - _notes/300 Templates
+  - _notes/Diary
+  - _notes/Template
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
