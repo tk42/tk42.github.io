@@ -108,8 +108,9 @@ defaults:
 # their entries' file path in the `include:` list.
 #
 exclude:
-  - _notes/Diary
-  - _notes/Template
+  - _memos/Diary
+  - _memos/Template
+  - _memos/README.md
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

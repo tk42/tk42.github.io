@@ -14,6 +14,6 @@ title:
 > 
 > ---*[アウトプットに注力する](http://localhost:4000/2024/04/05/%E3%82%A2%E3%82%A6%E3%83%88%E3%83%97%E3%83%83%E3%83%88%E3%81%AB%E6%B3%A8%E5%8A%9B%E3%81%99%E3%82%8B.html)*
 
-# tk42 とは
+# tk42 について
 Github，Instagram, Linkedin を参照ください．
 (Work in progress...)

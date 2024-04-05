@@ -40,7 +40,7 @@ home page. * {%- endcomment -%}
 {%- endif -%}
 <!-- feed with filter-->
 <div class="related-wrapper">
-  {% assign note_items = site.notes | sort: "date" | reverse %} {% for
+  {% assign note_items = site.memos | sort: "date" | reverse %} {% for
   note_items in note_items %} {%- if note_items.feed == "show" -%}
   <div class="notelist-feed">
     <a href="{{ site.baseurl }}{{note_items.url}}">
@@ -60,7 +60,7 @@ home page. * {%- endcomment -%}
 
 {%- if page.feedformat == "row" -%}
 <div class="block">
-  {% assign note_items = site.memos | sort: "date" | reverse %} {% for
+  {% assign note_items = site.notes | sort: "date" | reverse %} {% for
   note_items in note_items %}
   <div class="list-feed">
     <a
