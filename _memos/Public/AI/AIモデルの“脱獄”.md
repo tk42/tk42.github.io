@@ -1,8 +1,9 @@
 ---
 title: AIモデルの“脱獄”
-feed: show
 date: 2023-12-15
 tags:
+publish: true
+feed: show
 ---
 
 [GPT-4を含むAIモデルの“脱獄”、新手法が明らかに。研究者が安全対策強化を訴える \| WIRED.jp](https://wired.jp/article/automated-ai-attack-gpt-4/)
