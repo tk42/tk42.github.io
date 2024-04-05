@@ -2,6 +2,6 @@ _site
 .jekyll-cache
 .DS_Store
 pages/tags.md
-_notes/*
-!_notes/Public/
+_memos/*
+!_memos/Public/
 .obsidian
