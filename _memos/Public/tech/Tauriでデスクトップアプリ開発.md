@@ -9,5 +9,5 @@ publish: true
 feed: show
 ---
 
-[軽量RustフレームワークTauriでデスクトップアプリ開発をはじめよう | gihyo.jp](https://gihyo.jp/article/2022/10/rust-monthly-topics-02)
+[軽量RustフレームワークTauriでデスクトップアプリ開発をはじめよう \| gihyo.jp](https://gihyo.jp/article/2022/10/rust-monthly-topics-02)
 

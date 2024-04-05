@@ -1,6 +1,6 @@
 ---
 title: Embedding struct with pointer or with value in Golang
-date: 2020-05-06
+date: 2020-05-07
 tags: 
 publish: true
 ---
