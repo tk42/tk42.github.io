@@ -4,3 +4,4 @@ _site
 pages/tags.md
 _notes/*
 !_notes/Public/
+.obsidian
