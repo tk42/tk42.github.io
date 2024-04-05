@@ -66,9 +66,12 @@ plugins:
 ## Enable Collections
 ## Suggested collects are "notes" "lists" and "blog"
 collections:
-  notes:
+  memos:
     output: true
     permalink: /memos/:title
+  notes:
+    output: true
+    permalink: /notes/:title
 
 markdown: kramdown
 
@@ -85,11 +88,10 @@ sass:
 defaults:
   - scope:
       path: ""
-      type: posts
+      type: memos
     values:
       layout: Post
-      permalink: /notes/:title
-      content-type: post
+      content-type: notes
   - scope:
       path: ""
       type: notes

@@ -1,7 +1,8 @@
 ---
 layout: Post
 permalink: /notes
+feedformat: row
 title: Notes
 ---
 
-Note on a bunch of memos.
+Notes on a bunch of memos.
