@@ -20,4 +20,3 @@ services:
       - ./pages:/usr/src/app/pages
     ports:
       - "4000:4000"
-
