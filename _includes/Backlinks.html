@@ -39,7 +39,7 @@
             {%- endif -%}
     {%- endif -%}
 {%- endfor -%}
-{%- for note in site.posts -%}
+{%- for note in site.memos -%}
         {%- if note.url != page.url -%}
             {%- if note.content contains wiki_link_title -%}
                 {%- assign link_count = link_count | plus:1 -%}
