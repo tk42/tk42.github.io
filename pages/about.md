@@ -2,7 +2,7 @@
 permalink: /about.html
 layout: Post
 content-type: static
-title: 
+title: About
 ---
 
 # はじめに
