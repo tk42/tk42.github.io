@@ -4,7 +4,6 @@ feed: show
 date: 2024-04-05
 tags: 
 publish: true
-feed: show
 ---
 
 50万円
