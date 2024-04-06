@@ -4,7 +4,7 @@ aliases:
 tags:
   - NEC
   - Programming/Python
-cssclasses: 
+date: 2023-12-19
 publish: true
 feed: show
 ---
