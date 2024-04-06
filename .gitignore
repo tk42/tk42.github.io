@@ -4,4 +4,5 @@ _site
 pages/tags.md
 _memos/*
 !_memos/Public/
+!_memos/SearchData.json
 .obsidian
