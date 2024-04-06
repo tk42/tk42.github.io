@@ -1,5 +1,5 @@
 ---
-title: Phemex 
+title: Phemex
 tags:
   - Asset/Crypto
 cssclasses: 
