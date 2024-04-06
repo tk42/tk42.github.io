@@ -45,11 +45,11 @@
                 {%- assign sidenote = itemparts[0] | split:sidenote_delimiter -%}
             
                 {%- if external_link[1] == nil -%}
-                    {%- assign result_posts = site.memos | where: 'title',itemparts[0] -%}  
+                    {%- assign result_memos = site.memos | where: 'title',itemparts[0] -%}  
                     {%- assign result_posts = site.notes | where: 'title',itemparts[0] -%}
                     {%- assign result_pages = site.pages | where: 'title',itemparts[0] -%}
                     {%- assign internal_links = internal_links | append: link_joiner_delimiter | append: internal_link -%}
-                    {%- assign internal_urls = internal_urls | append: link_joiner_delimiter | append: result_posts[0].url | append: result_pages[0].url -%}
+                    {%- assign internal_urls = internal_urls | append: link_joiner_delimiter | append: result_memos[0].url | append: result_posts[0].url | append: result_pages[0].url -%}
                 {%- else -%}
                     {%- assign external_links = external_links | append: link_joiner_delimiter | append: external_link[0] -%}
                     {%- assign external_urls = external_urls | append: link_joiner_delimiter | append: external_link[1] -%}
