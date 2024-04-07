@@ -7,7 +7,8 @@ feed: show
 ---
 # Obsidian とは
 
-[Personal Knowledge Management](Personal%20Knowledge%20Management.md) を実現するためのツールの一つ．
+[[Personal Knowledge Management]] を実現するためのツールの一つ．
+
 ## Obsidianの特徴
 ### Markdown
 Obsidianでは全ての文章（これはノートと呼ばれる）はMarkdownファイルで管理される．ファイル名はタイトルであり，文章内からリンクを貼ることができる
