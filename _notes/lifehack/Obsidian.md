@@ -7,7 +7,7 @@ feed: show
 ---
 # Obsidian とは
 
-[[../../_memos/Public/lifehack/Personal Knowledge Management|Personal Knowledge Management]] を実現するためのツールの一つ．
+[[Personal Knowledge Management|Personal Knowledge Management]] を実現するためのツールの一つ．
 ## Obsidianの特徴
  - Markdown: Obsidianでは全ての文章（これはノートと呼ばれる）はMarkdownファイルで管理される．ファイル名はタイトルであり，文章内からリンクを貼ることができる，
  - バックリンク: キーワードに対してバックリンクと呼ばれるリンクは貼ることができる．バックリンクによりノートにネットワーク構造をもたせることができる．
@@ -98,6 +98,16 @@ from #鬼殺隊/柱
 フロントマターに書き込んだデータがインデックスページに一覧表示されました。
 
 
+## はじめかた
+
+[Obsidianを導入した際に設定したこと｜penchi](https://note.com/penchi/n/n01668ba7594e)
+
+始めてみるとかなり自由度が高いことが分かる．VaultはNoteを保存場所のルートだ．複数作っても情報が分散するので，Vaultは一つで十分だろう．
+既に述べたようにiPhoneはじめiOSのモバイルと同期する予定なら保存先はiCloud一択である．
+
+テンプレートを作成することになる．読書メモかTODO Listかノートの目的に応じて様々なテンプレートが必要になるだろう．
+そこでテンプレート用のフォルダを作成し，そこに各種テンプレートを保管しておくと良い．
+
 ## おすすめプラグイン
 ### Thino (X like なポスト機能)
 
@@ -129,6 +139,7 @@ Obsidian の Valut をGithubレポジトリにpush&mergeするプラグイン．
 ### 独自アカウントで情報発信する意義
 
 独自アカウントで情報発信していたが，Zennプラットフォームに移行した話．
+
 [荒廃したテックブログの再生](https://zenn.dev/levtech/articles/0224ec13e6663e#%E2%91%A4zenn%E3%81%AF%E3%81%84%E3%81%84%E3%81%9E%EF%BC%81)
 
 おそらくこれは正しいし，事実だろう．しかしこのウェブサイトは思考の整理のために開設したのでPVは多くなくて良い．
