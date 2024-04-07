@@ -4,7 +4,7 @@ aliases:
   - ツェッテルカステン
 tags:
   - PKM
-cssclasses: 
+date: 2020-06-04
 publish: true
 feed: show
 ---

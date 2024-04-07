@@ -4,7 +4,7 @@ tags:
   - Investment/FIRE
   - Asset/Crypto
   - CreditCard
-cssclasses: 
+date: 2024-04-05
 publish: true
 feed: show
 ---
