@@ -10,7 +10,7 @@ But there is one trouble thing. To export inside data from Firestore, we have to
 
 Then I started googling some easy tools for handling inside data in Firestore. Though there is a good tool, I have to clone the repository and build up an environment for it. Damn it! So, I wrapped it in a docker container and stored the container registry.
 
-[GitHub - tk42/firestore-import-export: An application that can help you to backup and restore from Cloud Firestore | Firebase](https://github.com/tk42/firestore-import-export?source=post_page-----b3c33e4d4779--------------------------------)
+[GitHub - tk42/firestore-import-export: An application that can help you to backup and restore from Cloud Firestore \| Firebase](https://github.com/tk42/firestore-import-export?source=post_page-----b3c33e4d4779--------------------------------)
 
 You don’t need to clone this repository. All you have to do is to write `docker-compose.yml` anywhere you want to export/import data, as follows
 
