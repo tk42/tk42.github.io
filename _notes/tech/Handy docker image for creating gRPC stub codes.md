@@ -45,9 +45,3 @@ After wrote this post, I found `bufbuild` that is a newer and easier way than�
 [Buf](https://buf.build/?source=post_page-----ff76114548c8--------------------------------)
 
 Someday I might write a story about Buf.
-
-I wrote the article about Bufbuild and introduced my new handly docker image!
-
-[Handy Docker image for creating gRPC stub codes with bufbuild | by tk42 | Medium](https://tk42.medium.com/handy-docker-image-for-creating-grpc-stub-codes-with-bufbuild-c6e8d70c00e7?source=post_page-----ff76114548c8--------------------------------)
-
-

@@ -4,8 +4,7 @@ date: 2022-05-10
 tags: 
 publish: true
 ---
-Hi, everyone. Today I’m thinking of talking to you guys about the new handly docker image that creates gRPC stub codes with **bufbuild**. This post could be continued from the following post.
-[Handy docker image for creating gRPC stub codes | by tk42 | Medium](https://tk42.medium.com/handy-docker-image-for-creating-grpc-stub-codes-ff76114548c8?source=post_page-----c6e8d70c00e7--------------------------------)
+Hi, everyone. Today I’m thinking of talking to you guys about the new handly docker image that creates gRPC stub codes with **bufbuild**.
 
 First of all, Bufbuild is a new way of working with Protocol Buffers as they said. Basically the `buf` CLI is a replacement tool with `protoc`. and furthermore `buf`has those features such as a linter that enforces good API design choices and structure and a breaking change detector that enforces compatibility at the source code or wire level.
 
