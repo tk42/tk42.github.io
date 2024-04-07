@@ -135,9 +135,11 @@ from #鬼殺隊/柱
 Obsidianで本を読書メモをつけるならこれがオススメ．本のカバー画像や作者・ジャンル・出版日などを自動で取得してくれる．
  - [Obsidian読書メモのすゝめ #メモ - Qiita](https://qiita.com/Yporon/items/db4655b1782d48d860a5)
 
-### Github Publisher
+### Obsidian Git
 
-Obsidian の Valut をGithubレポジトリにpush&mergeするプラグイン．追記のみなので，ノートの削除時は手動で消す必要がある．
+Obsidian の Valut をGithubレポジトリにpush & mergeするプラグイン．
+
+[ObsidianをGitでバージョン管理する - Kattsun.dev](https://kattsun.dev/posts/2021-05-25-obsidian-with-git/)
 
 ### Periodic Notes
 
