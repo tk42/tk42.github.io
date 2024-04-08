@@ -1,7 +1,7 @@
 ---
 title: GraphQLサーバをオレオレ構築するまで
 date: 2022-12-12
-tags: 
+tags: Technology/Programming, Technology/Databases, Technology/Web Development, Technology/Cloud Computing
 publish: true
 feed: show
 ---

@@ -1,7 +1,7 @@
 ---
 title: Firestore import/export by JSON
 date: 2022-10-29
-tags: 
+tags: Technology/Cloud Computing, Technology/Programming, Technology/Databases
 publish: true
 ---
 I would like to start by saying that Firestore is the best useful NoSQL in cloud services. The SDK of Firestore has been supported by many programming languages and it can be used easily by your service account.

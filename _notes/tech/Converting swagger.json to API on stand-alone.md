@@ -1,7 +1,7 @@
 ---
 title: Converting swagger.json to API on stand-alone
 date: 2021-01-05
-tags: 
+tags: Technology/Programming, Software Development, API Documentation
 publish: true
 ---
 In this post, we’re gonna take a look at converting swagger.json to HTML on stand-alone.
