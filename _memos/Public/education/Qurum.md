@@ -2,7 +2,7 @@
 title: Qurum
 feed: show
 date: 2024-04-05
-tags: 
+tags: Healthcare, Baby Products
 publish: true
 ---
 

@@ -2,6 +2,7 @@
 title: Super tedious behavior of Web Audio API on iPad
 date: 2023-12-01
 publish: true
+tags: Technology/Programming, Web Development, iOS Development
 ---
 A report that my webpage output no sound only on iPad was a starting point for my nightmare this week.
 

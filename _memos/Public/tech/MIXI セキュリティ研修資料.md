@@ -1,9 +1,6 @@
 ---
 title: MIXI セキュリティ研修資料
-tags:
-  - Textbook
-  - Tech/Security
-  - 教育/新人研修
+tags: Technology, Security Training
 date: 2024-04-05
 publish: true
 feed: show

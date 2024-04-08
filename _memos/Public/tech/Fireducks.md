@@ -1,9 +1,7 @@
 ---
 title: Fireducks
 aliases: 
-tags:
-  - NEC
-  - Programming/Python
+tags: Technology/Programming, Data Science/Analytics
 date: 2023-12-19
 publish: true
 feed: show
