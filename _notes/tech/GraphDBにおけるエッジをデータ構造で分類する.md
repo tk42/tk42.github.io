@@ -1,7 +1,7 @@
 ---
 title: GraphDBにおけるエッジをデータ構造で分類する
 date: 2022-11-02
-tags: 
+tags: Technology, Database Management, Graph Databases
 publish: true
 feed: show
 ---

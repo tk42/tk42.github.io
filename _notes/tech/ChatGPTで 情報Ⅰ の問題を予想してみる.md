@@ -1,7 +1,7 @@
 ---
 title: 
 date: 2023-11-03
-tags: 
+tags: Technology, Education
 publish: true
 feed: show
 ---

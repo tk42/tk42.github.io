@@ -1,7 +1,7 @@
 ---
 title: gRPC backend server with SurrealDB
 date: 2022-10-31
-tags: 
+tags: Technology, Databases, Programming
 publish: true
 ---
 Recently I found an ‘ultimate’ database made by Rust which is called “SurrealDB”.

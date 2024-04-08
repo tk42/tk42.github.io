@@ -1,7 +1,7 @@
 ---
 title: Deadlocks will raise in sending/receiving channels without buffers on single goroutine
 date: 2021-05-11
-tags: 
+tags: Programming/Tech, Programming/Languages/Go, Programming/Concurrency
 publish: true
 ---
 In this post, we’ll mention about the behaviour of channel under a certain condition in golang.
