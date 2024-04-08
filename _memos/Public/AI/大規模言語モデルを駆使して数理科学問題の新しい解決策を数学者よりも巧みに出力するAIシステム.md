@@ -1,10 +1,7 @@
 ---
 title: 大規模言語モデルを駆使して数理科学問題の新しい解決策を数学者よりも巧みに出力するAIシステム
 aliases: 
-tags:
-  - アルゴリズム/ビンパッキング
-  - アルゴリズム/ナップサック
-  - Source/GIGAZINE
+tags: Technology, Artificial Intelligence, Mathematics
 date: 2023-12-15
 publish: true
 feed: show

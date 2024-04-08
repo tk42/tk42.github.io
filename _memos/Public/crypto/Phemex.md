@@ -1,7 +1,6 @@
 ---
 title: Phemex
-tags:
-  - Asset/Crypto
+tags: Finance, Entrepreneurship, Cryptocurrency
 cssclasses: 
 publish: true
 feed: show

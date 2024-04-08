@@ -1,9 +1,6 @@
 ---
 title: CL Card
-tags:
-  - Investment/FIRE
-  - Asset/Crypto
-  - CreditCard
+tags: Technology, Finance
 date: 2024-04-05
 publish: true
 feed: show

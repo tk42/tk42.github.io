@@ -1,7 +1,7 @@
 ---
 title: AIモデルの“脱獄”
 date: 2023-12-15
-tags: 
+tags: Technology/Artificial Intelligence, Technology/Security, Technology/Programming
 publish: true
 feed: show
 ---
