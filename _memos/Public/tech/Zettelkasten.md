@@ -2,8 +2,7 @@
 title: Zettelkasten
 aliases:
   - ツェッテルカステン
-tags:
-  - PKM
+tags: Education, Productivity, Sociology
 date: 2020-06-04
 publish: true
 feed: show
