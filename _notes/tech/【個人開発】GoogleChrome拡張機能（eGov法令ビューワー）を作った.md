@@ -1,7 +1,7 @@
 ---
 title: 【個人開発】GoogleChrome拡張機能（eGov法令ビューワー）を作った
 date: 2022-04-19
-tags: 
+tags: Technology/Programming/Chrome Extensions
 publish: true
 feed: show
 ---

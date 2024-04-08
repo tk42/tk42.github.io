@@ -1,7 +1,7 @@
 ---
 title: Obsidian
 date: 2024-04-07
-tags: 
+tags: Technology/Software/Personal Knowledge Management
 publish: true
 feed: show
 ---

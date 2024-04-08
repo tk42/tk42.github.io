@@ -1,7 +1,9 @@
 ---
 title: A proxy container to connect to Google Cloud Memorystore for Redis from Google Colab
 date: 2020-09-09
-tags: 
+tags:
+  - Technology/Computers
+  - Electronics/Programming
 publish: true
 ---
 Hi there. Have you enjoyed Google Cloud services? I really have. In this article, I discuss a way to connect to Google Cloud Memorystore for Redis from Google Colab.
