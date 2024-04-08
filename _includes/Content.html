@@ -145,7 +145,7 @@
                     {%- assign srsCounter = srsCounter | plus:1 -%}
                 {%- endif -%}
             {%- else -%}
-                {%- assign link_text = '<a href="' | append: url | append: '">' | append: title | append: '</a>' -%}
+                {%- assign link_text = '<a href="' | append: url | append: '" target="_blank">' | append: title | append: '</a>' -%}
             {%- endif -%}
             {%- assign bracket_link = '[[' | append: title | append: external_link_delimiter | append: url | append: ']]' -%}
             {%- assign replaced_content = replaced_content | replace: bracket_link,link_text -%}
