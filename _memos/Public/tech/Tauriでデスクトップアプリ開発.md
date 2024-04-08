@@ -1,7 +1,7 @@
 ---
 title: Tauriでデスクトップアプリ開発
 aliases: 
-tags: []
+tags: Technology/Programming, Software Development
 date: 2022-10-20
 publish: true
 feed: show
