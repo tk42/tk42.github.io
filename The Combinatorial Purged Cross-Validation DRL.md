@@ -1,7 +1,7 @@
 ---
 title: The Combinatorial Purged Cross-Validation method
 date: 2024-04-12
-tags: 
+tags: Technology, Data-Science, Machine-Learning, Deep-Learning, Reinforcement-Learning, Validation-Methods
 publish: true
 feed: show
 ---
@@ -18,7 +18,7 @@ Before to explain CPCV method, we need quickly to look back to the walk forward 
 
 ## Walk Forward Method
 
-
+The walk forward method is the one of the primitive validation methods.
 
 ## Cross Validation Method 
 
