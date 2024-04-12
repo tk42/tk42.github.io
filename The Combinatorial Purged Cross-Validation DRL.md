@@ -9,7 +9,7 @@ We gonna talk about the combinatorial purged cross validation method applied to 
 
 # Why we need validation
 
-
+Dataset especially time series usually has a lot of noises and their trends are difficult to be told. This behavior is so-called as a high SN(signal and noise) ratio. Also, models would be easily overfitted depends on validation methods such as walk-forward method or cross validation method as later. We need to test 
 
 # Methods
 
@@ -21,4 +21,8 @@ First of all, we're about to describing CPCV (combinatorial purged cross validat
 ## Cross Validation Method 
 
 
-# Explanation for 
+## Combinatorial  Purged Cross Validation Method
+
+
+
+# Explanation for CPCV applied to DRL
