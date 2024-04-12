@@ -9,7 +9,7 @@ We gonna talk about the combinatorial purged cross validation method applied to 
 
 # Why we need validation
 
-Non-stationary dataset especially time series usually has a lot of noises and their trends are difficult to be told. This behavior is so-called as a high SN(signal and noise) ratio. Also, models would be easily overfitted depends on validation methods such as walk-forward method or cross validation method as later. We need to test your models on as many backtest paths of the train/valid dataset as possible and also need to check the model on the test dataset.
+Non-stationary dataset especially market time series usually has a lot of noises and their trends are difficult to be told. This behavior is so-called as a high SN(signal and noise) ratio. Also, models would be easily overfitted depends on validation methods such as walk-forward method or cross validation method as later. We need to test your models on as many backtest paths of the train/valid dataset as possible and also need to check the model on the test dataset.
 To do this, Combinatorial Purged Cross-Validation (CPCV) method may be useful and also we gonna talk about its application for DRL.
 
 # Methods
@@ -28,3 +28,4 @@ The walk forward method is the one of the primitive validation methods.
 
 
 # Explanation for CPCV applied to DRL
+
