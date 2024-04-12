@@ -5,3 +5,4 @@ tags:
 publish: true
 feed: show
 ---
+We gonna talk about the combinatorial purged cross vali
