@@ -137,15 +137,14 @@ from #鬼殺隊/柱
 
 特に，個人的にはUniversal Decimal Classificationに基づいてラベリングするのにハマっている．図書館の本の背表紙にラベルが 024 みたいに書かれているのを見たことがあると思うが，あれはNDCという日本独自の図書の分類法である．
 
-これに対して，世界共通の図書分類法が Universal Decimal Classification であるが，これに基づいてタグを付与すれば同じようなカテゴリが集まる，というわけだ．
-UDCの一覧は下記にある．
+これに対して，世界共通の図書分類法が Universal Decimal Classification であるが，これに基づいてタグを付与すれば同じようなカテゴリが集まる，というわけだ．UDCの一覧は下記にある．
 [UDC Summary](https://udcsummary.info/php/index.php?lang=ja)
 
 そして，UDCでラベリングするよう指示するプロンプトは今のところ下記を使っている．
 
 
 ```
-Classify this content to suitable at most 5 classification code without duplication defined by Universal Decimal Classification and concat all of them with commas:
+Classify this content to suitable at most 5 classification code without duplication defined by Universal Decimal Classification, replace all dots with slashes in each code and concat all codes with commas:
 """
 {{input}}
 """
@@ -155,7 +154,7 @@ Answer format is JSON {reliability:0~1, output:selected_categories}.
 注意点としてはUDCでは大分類，中分類，小分類の区別にピリオドを使うが，Obsidianでタグ名にピリオドを使うのは下記の制約がある．
 
 **TODO 強制的にスラッシュに変換して，タグの階層構造に対応させたいが，GPTがgpt-3.5-turbo固定なので賢い変換ができない** [Support for GPT4 · Issue #10 · HyeonseoNam/auto-classifier · GitHub](https://github.com/HyeonseoNam/auto-classifier/issues/10)
-
+→ 作った [Add custom model and max tokens options in settings by tk42 · Pull Request #25 · HyeonseoNam/auto-classifier · GitHub](https://github.com/HyeonseoNam/auto-classifier/pull/25)
 
 ![1643591892100-2jOYU721M4.png](https://assets.st-note.com/img/1643591892100-2jOYU721M4.png)
 
