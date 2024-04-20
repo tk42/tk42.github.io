@@ -2,7 +2,7 @@
 title: Digital Garden
 feed: show
 date: 2024-04-06
-tags: Technology/Software, Open Source, Digital Publishing
+tags: 004/7,004/738,004/738/4,004/738/5,004/738/6
 publish: true
 ---
 > The [Obsidian Digital Garden Plugin](https://github.com/oleeskild/obsidian-digital-garden) is a free and open source publishing tool for [Obsidian](https://obsidian.md/).

@@ -2,7 +2,7 @@
 title: Zettelkasten
 aliases:
   - ツェッテルカステン
-tags: Education, Productivity, Sociology
+tags: 316/7,316/8,316/9,316/88,316/89
 date: 2020-06-04
 publish: true
 feed: show
