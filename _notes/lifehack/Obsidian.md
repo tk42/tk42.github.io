@@ -1,7 +1,7 @@
 ---
 title: Obsidian
 date: 2024-04-07
-tags: 025.4,004.7,025.4,025.4,025.4
+tags: 025/5
 publish: true
 feed: show
 ---
@@ -141,18 +141,18 @@ from #鬼殺隊/柱
 UDCの一覧は下記にある．
 [UDC Summary](https://udcsummary.info/php/index.php?lang=ja)
 
-そして，UDCでラベリングするよう指示するプロンプトは今のところ下記を使っている．最大5つのUDCにラベリングされる．
+そして，UDCでラベリングするよう指示するプロンプトは今のところ下記を使っている．
 
 
 ```
-Classify this content to no duplicated multiple suitable at most 5 codes defined by Universal Decimal Classification as much detail as you can, also split codes with commas and replace periods in codes with hyphen.
+Classify this content to suitable classification code defined by Universal Decimal Classification and replace all dot in the code with slash:
 """
 {{input}}
 """
 Answer format is JSON {reliability:0~1, output:selected_category}.
 ```
 
-注意点としてはUDCでは大分類，中分類，小分類の区別にピリオドを使うが，Obsidianでタグ名にピリオドを使うのは下記の制約があるため，強制的にハイフンに変換している．
+注意点としてはUDCでは大分類，中分類，小分類の区別にピリオドを使うが，Obsidianでタグ名にピリオドを使うのは下記の制約があるため，強制的にスラッシュに変換して，タグの階層構造に対応させている．
 
 ![1643591892100-2jOYU721M4.png](https://assets.st-note.com/img/1643591892100-2jOYU721M4.png)
 
