@@ -1,6 +1,6 @@
 ---
 title: CL Card
-tags: 336/763, 336/76, 004
+tags: 336/2, 336/76, 004
 date: 2024-04-05
 publish: true
 feed: show

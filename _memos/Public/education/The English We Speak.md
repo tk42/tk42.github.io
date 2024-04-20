@@ -2,7 +2,7 @@
 title: The English We Speak
 feed: show
 date: 2024-04-11
-tags: Language Learning, Podcasts
+tags: 004,811/811/1,654/654/7
 publish: true
 ---
 BBCが配信してる外国人向け英語学習コンテンツ
