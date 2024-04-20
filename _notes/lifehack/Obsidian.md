@@ -154,7 +154,8 @@ Answer format is JSON {reliability:0~1, output:selected_categories}.
 
 注意点としてはUDCでは大分類，中分類，小分類の区別にピリオドを使うが，Obsidianでタグ名にピリオドを使うのは下記の制約がある．
 
-**TODO 強制的にスラッシュに変換して，タグの階層構造に対応させたいが，GPTがgpt-3.5-turbo固定なので賢い**
+**TODO 強制的にスラッシュに変換して，タグの階層構造に対応させたいが，GPTがgpt-3.5-turbo固定なので賢い変換ができない** [Support for GPT4 · Issue #10 · HyeonseoNam/auto-classifier · GitHub](https://github.com/HyeonseoNam/auto-classifier/issues/10)
+
 
 ![1643591892100-2jOYU721M4.png](https://assets.st-note.com/img/1643591892100-2jOYU721M4.png)
 
