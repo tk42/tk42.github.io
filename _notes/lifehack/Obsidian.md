@@ -1,7 +1,7 @@
 ---
 title: Obsidian
 date: 2024-04-07
-tags: 025-5,004-7,004-8,004-9,004-3
+tags: 025.4, 004.7, 025.1, 004.8, 025.3
 publish: true
 feed: show
 ---
