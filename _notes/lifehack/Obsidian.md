@@ -1,7 +1,7 @@
 ---
 title: Obsidian
 date: 2024-04-07
-tags: Technology/Software/Personal Knowledge Management
+tags: 004.7, 025.4, 025.5, 070, 070.4
 publish: true
 feed: show
 ---
@@ -141,7 +141,16 @@ from #鬼殺隊/柱
 UDCの一覧は下記にある．
 [UDC Summary](https://udcsummary.info/php/index.php?lang=ja)
 
-そして，UDCタグを
+そして，UDCでラベリングするよう指示するプロンプトは今のところ下記を使っている．
+
+```
+Classify this content to no duplicated multiple suitable at most 5 codes defined by Universal Decimal Classification as much detail as you can, also split codes with commas:
+"""
+{{input}}
+"""
+Answer format is JSON {reliability:0~1, output:selected_category}. 
+Even if you are not sure, qualify the reliability and recommend a proper category.
+```
 
 ### BookSearch (読書メモ)
 
