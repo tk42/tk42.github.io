@@ -2,7 +2,7 @@
 title: N次元超球体，球冠，球帯
 feed: show
 date: 2024-04-07
-tags: Mathematics/Geometry
+tags: 51/72, 514/3, 519/3, 531/1, 53/11
 publish: true
 ---
 $$N$$次元超球体の体積や表面積は広く知られている

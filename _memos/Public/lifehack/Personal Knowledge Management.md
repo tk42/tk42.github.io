@@ -2,7 +2,7 @@
 title: Personal Knowledge Management
 feed: show
 date: 2024-04-06
-tags: Technology/Information Technology, Education
+tags: 004/7, 159/9, 316/3, 65/012
 publish: true
 ---
 > PKMはPersonal Knowledge Managementの略で、**個人的なナレッジマネジメント（知識管理）**のことです。
