@@ -2,7 +2,7 @@
 title: 歩くのが早い人はIQが高く，脳が大きい
 feed: show
 date: 2024-04-08
-tags: Health, Science
+tags: 159/9,612/8,613/7
 publish: true
 ---
 
