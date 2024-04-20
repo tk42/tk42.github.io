@@ -1,11 +1,7 @@
 ---
 title: 大規模言語モデルを駆使して数理科学問題の新しい解決策を数学者よりも巧みに出力するAIシステム
 aliases: 
-tags:
-  - Technology
-  - Mathematics
-  - Research
-  - AI
+tags: 004/45,51/1,681/4,681/5,681/7
 date: 2023-12-15
 publish: true
 feed: show

@@ -1,6 +1,6 @@
 ---
 title: CL Card
-tags: Technology, Finance
+tags: 336/763, 336/76, 004
 date: 2024-04-05
 publish: true
 feed: show
