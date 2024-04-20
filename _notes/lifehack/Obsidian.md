@@ -144,12 +144,11 @@ UDCの一覧は下記にある．
 そして，UDCでラベリングするよう指示するプロンプトは今のところ下記を使っている．
 
 ```
-Classify this content to no duplicated multiple suitable at most 5 codes defined by Universal Decimal Classification as much detail as you can, also split codes with commas:
+Classify this content to no duplicated multiple suitable at most 5 codes defined by Universal Decimal Classification as much detail as you can, also split codes with commas and replace periods in codes with hyphen.
 """
 {{input}}
 """
-Answer format is JSON {reliability:0~1, output:selected_category}. 
-Even if you are not sure, qualify the reliability and recommend a proper category.
+Answer format is JSON {reliability:0~1, output:selected_category}.
 ```
 
 ### BookSearch (読書メモ)
