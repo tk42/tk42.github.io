@@ -135,6 +135,14 @@ from #鬼殺隊/柱
 
 これも重宝している．ノートの内容をGPTに投げて，タグに適切なカテゴリを設定する．
 
+特に，個人的にはUniversal Decimal Classificationに基づいてラベリングするのにハマっている．図書館の本の背表紙にラベルが 024 みたいに書かれているのを見たことがあると思うが，あれはNDCという日本独自の図書の分類法である．
+
+これに対して，世界共通の図書分類法が Universal Decimal Classification であるが，これに基づいてタグを付与すれば同じようなカテゴリが集まる，というわけだ．
+UDCの一覧は下記にある．
+[UDC Summary](https://udcsummary.info/php/index.php?lang=ja)
+
+そして，UDCタグを
+
 ### BookSearch (読書メモ)
 
 Obsidianで本を読書メモをつけるならこれがオススメ．本のカバー画像や作者・ジャンル・出版日などを自動で取得してくれる．
