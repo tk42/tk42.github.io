@@ -2,11 +2,7 @@
 title: VINCENT LEGOU
 feed: show
 date: 2024-04-06
-tags:
-  - Food
-  - Drink
-  - Wine
-  - Winemaking
+tags: 663/3,663/32,663/38,663/39,663/398
 publish: true
 ---
 > DRCのワイン造りとスピリッツを継承した、ヴォーヌ・ロマネの注目ドメーヌ
