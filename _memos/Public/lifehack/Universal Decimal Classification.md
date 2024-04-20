@@ -2,7 +2,9 @@
 title: Universal Decimal Classification
 feed: show
 date: 2024-04-20
-tags: 
+tags:
+  - 02/1
+  - 02/14
 publish: true
 ---
 > **国際十進分類法**（こくさいじっしんぶんるいほう、Universal Decimal Classification; **UDC**）は、[1905年](https://ja.wikipedia.org/wiki/1905%E5%B9%B4 "1905年")に[ベルギー](https://ja.wikipedia.org/wiki/%E3%83%99%E3%83%AB%E3%82%AE%E3%83%BC "ベルギー")の[ポール・オトレ](https://ja.wikipedia.org/wiki/%E3%83%9D%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%AA%E3%83%88%E3%83%AC "ポール・オトレ")と[アンリ・ラ・フォンテーヌ](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%B3%E3%83%AA%E3%83%BB%E3%83%A9%E3%83%BB%E3%83%95%E3%82%A9%E3%83%B3%E3%83%86%E3%83%BC%E3%83%8C "アンリ・ラ・フォンテーヌ")、および両者が設立した国際書誌学会（IIB）によって考案された[図書分類法](https://ja.wikipedia.org/wiki/%E5%9B%B3%E6%9B%B8%E5%88%86%E9%A1%9E%E6%B3%95 "図書分類法")である。
