@@ -1,7 +1,7 @@
 ---
 title: Fireducks
 aliases: 
-tags: Technology/Programming, Data Science/Analytics
+tags: 004/45,681/3,681/31
 date: 2023-12-19
 publish: true
 feed: show

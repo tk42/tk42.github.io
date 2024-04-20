@@ -2,7 +2,7 @@
 title: Colab上で毎回pip installしなくてすむテクニック
 feed: show
 date: 2024-04-06
-tags: Technology/Software Development, Cloud Computing
+tags: 004/678,681/3
 publish: true
 ---
 GoogleDriveに仮想環境を構築することでColab上で毎回pip install しなくてすむ

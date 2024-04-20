@@ -1,6 +1,6 @@
 ---
 title: MIXI セキュリティ研修資料
-tags: Technology, Security Training
+tags: 004/7,004/56
 date: 2024-04-05
 publish: true
 feed: show
