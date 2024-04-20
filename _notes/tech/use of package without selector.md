@@ -1,7 +1,7 @@
 ---
 title: use of package without selector
 date: 2020-05-26
-tags: Technology/Programming/Languages/Golang, Technology/Programming/Languages/Java
+tags: 004/11,004/42,004/78
 publish: true
 ---
 # TL;DR

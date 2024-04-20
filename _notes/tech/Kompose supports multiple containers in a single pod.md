@@ -1,7 +1,7 @@
 ---
 title: Kompose supports multiple containers in a single pod
 date: 2021-07-10
-tags: Technology/Software Development, Technology/Containers, Technology/Kubernetes
+tags: 004/7,004/678,004/678/3,681/3,681/3/06
 publish: true
 ---
 Coucou. Today I gonna write about my PR recently merged to Kompose.

@@ -1,12 +1,7 @@
 ---
 title: 【Golang】テンプレートからEnumコード生成してみた（text/template）
 date: 2022-08-17
-tags:
-  - Programming/Software
-  - Development
-  - Golang
-  - Code
-  - Generation
+tags: 004/7,004/72,004/78,681/3
 publish: true
 feed: show
 ---

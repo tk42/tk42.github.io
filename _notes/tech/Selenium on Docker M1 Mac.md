@@ -2,11 +2,7 @@
 title: Selenium on Docker M1 Mac
 date: 2023-05-26
 publish: true
-tags:
-  - Development
-  - Technology/Software
-  - Testing
-  - Technology/Docker
+tags: 004/678,004/42,681/3,681/142,004/66
 ---
 After spending the entire day searching online, I was finally able to locate the solution. In order to assist others who may encounter the same issue, I am documenting it here. Selenium is a widely used Python software for conducting end-to-end testing. Chrome is the preferred headless web browser for this purpose. Our objective is to replicate this process on an M1Mac in a Docker environment.
 

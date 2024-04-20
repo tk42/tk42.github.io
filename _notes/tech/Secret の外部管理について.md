@@ -2,7 +2,7 @@
 title: Secret の外部管理について
 feed: show
 date: 2022-08-06
-tags: Technology/Software Development, Technology/Cloud Computing, Technology/Security
+tags: 004/7,004/78,004/78/028/6,004/78/028/6/09,004/78/028/6/092
 publish: true
 ---
 # Secretをどこにどうやって保管するか問題
