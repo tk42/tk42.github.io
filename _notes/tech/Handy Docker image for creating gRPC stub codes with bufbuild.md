@@ -1,7 +1,7 @@
 ---
 title: Handy Docker image for creating gRPC stub codes with bufbuild
 date: 2022-05-10
-tags: Technology/Programming, Docker, Protocol Buffers
+tags: 004/7,004/78,004/76,681/3,681/32
 publish: true
 ---
 Hi, everyone. Today I’m thinking of talking to you guys about the new handly docker image that creates gRPC stub codes with **bufbuild**.

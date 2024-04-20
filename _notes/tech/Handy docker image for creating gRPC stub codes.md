@@ -1,7 +1,7 @@
 ---
 title: Handy docker image for creating gRPC stub codes
 date: 2021-05-30
-tags: Technology/Programming, Technology/Networking, Technology/Software Development
+tags: 004/42,004/678,004/678/3,004/678/31,004/678/312
 publish: true
 ---
 Hi everyone. Today’s story is to create gRPC stub codes when you need in developing gRPC application with golang.

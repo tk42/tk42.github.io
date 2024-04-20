@@ -1,7 +1,7 @@
 ---
 title: Python DEAP with Multiprocessing Example
 date: 2022-07-03
-tags: Technology, Programming, Genetic Algorithms, Multiprocessing
+tags: 004/7,681/3,681/4,004/45,681/5
 publish: true
 ---
 Today I’ll let you know some tips for using the DEAP framework with the multiprocessing module.

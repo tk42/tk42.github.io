@@ -1,7 +1,7 @@
 ---
 title: Deploy Apache/Airflow to GCE
 date: 2023-03-04
-tags: Technology/Computers/Software/Workflow Management
+tags: 004/678,681/3,004/6,004/738,004/76
 publish: true
 ---
 Hi everyone. Here I wrote just a memo how to deploy Apache/Airflow to GCE.

@@ -1,9 +1,7 @@
 ---
 title: Starting a new tech blog
 date: 2020-05-06
-tags:
-  - Technology/Tech
-  - Blog
+tags: 004/42,004/43,004/44,004/65,004/678
 publish: true
 ---
 

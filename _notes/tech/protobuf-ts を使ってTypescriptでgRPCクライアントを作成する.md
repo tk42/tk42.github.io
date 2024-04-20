@@ -1,7 +1,7 @@
 ---
 title: protobuf-ts を使ってTypescriptでgRPCクライアントを作成する
 date: 2022-05-12
-tags: Technology/Programming/TypeScript, Technology/Programming/gRPC, Technology/Programming/Protobuf
+tags: 004/11,004/42,004/45,004/7,004/738
 publish: true
 feed: show
 ---
