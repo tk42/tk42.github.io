@@ -2,7 +2,7 @@
 title: Marcos M. Lopez de Prado 先生の市場予測に関するアイディア集
 feed: show
 date: 2024-04-13
-tags: Finance, Research, Investment, Mathematics, Innovation
+tags: 519/8, 336/7, 658/15/015
 publish: true
 ---
 
