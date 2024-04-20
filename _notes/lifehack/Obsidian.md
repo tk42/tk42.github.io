@@ -1,7 +1,7 @@
 ---
 title: Obsidian
 date: 2024-04-07
-tags: 025/5
+tags: 004.9,004.7,025.4,025.3,025.2
 publish: true
 feed: show
 ---
@@ -145,14 +145,16 @@ UDCの一覧は下記にある．
 
 
 ```
-Classify this content to suitable classification code defined by Universal Decimal Classification and replace all dot in the code with slash:
+Classify this content to suitable at most 5 classification code without duplication defined by Universal Decimal Classification and concat all of them with commas:
 """
 {{input}}
 """
-Answer format is JSON {reliability:0~1, output:selected_category}.
+Answer format is JSON {reliability:0~1, output:selected_categories}.
 ```
 
-注意点としてはUDCでは大分類，中分類，小分類の区別にピリオドを使うが，Obsidianでタグ名にピリオドを使うのは下記の制約があるため，強制的にスラッシュに変換して，タグの階層構造に対応させている．
+注意点としてはUDCでは大分類，中分類，小分類の区別にピリオドを使うが，Obsidianでタグ名にピリオドを使うのは下記の制約がある．
+
+**TODO 強制的にスラッシュに変換して，タグの階層構造に対応させたいが，GPTがgpt-3.5-turbo固定なので賢い**
 
 ![1643591892100-2jOYU721M4.png](https://assets.st-note.com/img/1643591892100-2jOYU721M4.png)
 
