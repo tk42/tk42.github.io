@@ -1,13 +1,19 @@
 ---
 title: UnixTimestamp auto-padding with 0
 date: 2024-04-23
-tags: 
+tags: 004/7,004/42,004/6,681/3
 publish: true
 feed: show
 ---
-巷によくある UnixTimestamp 変換器(例えば [Unix Time Stamp - Epoch Converter](https://www.unixtimestamp.com/) )を使うとき，10桁全て入力しないと変換してくれないことが多い（プログラムで変換する時も動揺）
+Hi.
 
-ざっくりと「いつぐらいか」を早く知りたい時に，後方を0で勝手にpaddingしてくれたら便利だなと思って作ったら，思いの外便利だったので
+When using a common UnixTimestamp converter (e.g. [Unix Time Stamp - Epoch Converter](https://www.unixtimestamp.com/)), you often have to input all 10 digits to get a conversion. (The same goes for programmatic conversions.)
 
-[Unix Timestamp Converter](https://tk42.jp/unixts/)
+When you want to know “roughly when" before inputting all of 10 digits, it would be convenient if you padded the back part with 0.
 
+I made it with the idea that it would be useful, but it turned out to be unexpectedly convenient, so I'm releasing it to the public. It is also useful that it works only on the client side.
+
+### [Unix Timestamp Converter](https://tk42.jp/unixts/)
+
+
+[Source](https://github.com/tk42/unixts)
