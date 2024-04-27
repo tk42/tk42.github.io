@@ -2,7 +2,7 @@
 title: ED法
 feed: show
 date: 2024-04-27
-tags: 
+tags: 004/45,004/8,004/9,004/93
 publish: true
 ---
 ED法
