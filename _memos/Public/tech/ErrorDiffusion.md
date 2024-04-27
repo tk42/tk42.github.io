@@ -15,8 +15,3 @@ ED法
 
 SNNの特殊な形式じゃないのか？という批判もある．
 [ED法とSNNの違いを考えてみる #ED法 - Qiita](https://qiita.com/obgynengine/items/44e8cfe2bdd25ac49cb3)
-
-SNNとは
-[ゼロから学ぶスパイキングニューラルネットワーク](https://snn.hirlab.net/)
-
-SNNにはLIFがある．
