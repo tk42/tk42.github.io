@@ -15,3 +15,11 @@ First of all, the official implementation `state-spaces/mamba` is based on PyTor
 [GitHub - state-spaces/mamba](https://github.com/state-spaces/mamba)
 
 srush who is an author of The annotated S4 earlier also explains Mamba here [GitHub - srush/annotated-mamba: Annotated version of the Mamba paper](https://github.com/srush/annotated-mamba) 
+Note that this post and repository use Triton which is a programming language from OpenAI for writing GPU code instead of PyTorch or Jax. When I try to run the code on Google Colab, **it didn’t work for me.**
+
+There are several implementations for Mamba with Jax.
+ - [GitHub - vvvm23/mamba-jax: Unofficial but Efficient Implementation of "Mamba: Linear-Time Sequence Modeling with Selective State Spaces" in JAX](https://github.com/vvvm23/mamba-jax)
+ - [GitHub - radarFudan/mamba-minimal-jax](https://github.com/radarFudan/mamba-minimal-jax)
+ - [GitHub - hu-po/jamba: Mamba in JAX](https://github.com/hu-po/jamba)
+
+`vvvm23/mamba-jax` would he
