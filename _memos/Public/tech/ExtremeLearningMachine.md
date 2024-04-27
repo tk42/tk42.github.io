@@ -1,8 +1,8 @@
 ---
 title: Extreme Learning Machine
 feed: show
-date: 
-tags: 
+date: 2024-04-27
+tags: 004/45, 004/62, 519/68
 publish: true
 ---
 [Extreme learning machine - Wikipedia](https://en.wikipedia.org/wiki/Extreme_learning_machine)
