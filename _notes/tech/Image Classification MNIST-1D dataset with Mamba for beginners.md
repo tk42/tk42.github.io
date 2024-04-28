@@ -117,4 +117,54 @@ length, dim = 784, 1
 model = MambaMNISTClassifier(length, dim)
 ```
 
-The dimentsion of our dataset MNIST-1D is 
+Note that the dimension of our dataset MNIST-1D is `(784, 1)`. Finally we can train this `MambaMNISTClassifier` as below
+
+```python
+import torch
+import torch.nn as nn
+from tqdm.contrib import tenumerate
+
+criterion = nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
+
+for epoch in range(10):
+	print(f"Epoch: {epoch}")
+	train_loss, test_loss = 0.0, 0.0
+	model.train()
+
+	for idx, samples in tenumerate(trainloader):
+		data, label = samples
+		# print(f"{data.shape=}, {label.shape=}") # (32, 1, 28, 28), (32,)
+
+		inputs = data.view(batch_size, -1, 1).cuda()
+		# print(f"{inputs.shape=}") # (32, 784, 1)
+		targets = F.one_hot(label.view(batch_size), num_classes=10).float().cuda()
+
+		optimizer.zero_grad()
+		outputs = model(inputs)
+		assert outputs.shape[1] == 10, f"{outputs.shape=}, {targets.shape=}"
+		# print(f"{outputs.shape=}, {targets.shape=}") # (32, 10), (32, 10)
+
+		loss = criterion(outputs, targets)
+		loss.backward()
+		optimizer.step()
+		train_loss += loss.item()
+
+	print("train loss: ", train_loss / len(trainloader))
+
+	model.eval()
+	with torch.no_grad():
+		for idx, samples in enumerate(testloader):
+			data, label = samples
+			if idx == len(testloader) - 1:
+				continue
+
+			inputs = data.view(batch_size, -1, dim).cuda()
+			targets = F.one_hot(label, num_classes=10).float().cuda()
+			outputs = model(inputs)
+			loss = criterion(outputs, targets)
+			test_loss += loss.item()
+
+	print("test loss: ", test_loss / len(testloader))
+```
+
