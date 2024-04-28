@@ -26,4 +26,7 @@ There are several implementations for Mamba with JAX.
 
 `vvvm23/mamba-jax` would help you to run Mamba algorithm with `equinox` which brings more power to your model building in JAX.
 
-`radarFudan/mamba-minimal-jax` 
+`radarFudan/mamba-minimal-jax` is basically intended to build LLM system.
+
+`hu-po/jamba` needs more hyper parameters than the official implementation so you should dive deeper inside it.
+
