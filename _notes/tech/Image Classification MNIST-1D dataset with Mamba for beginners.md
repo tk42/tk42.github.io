@@ -2,7 +2,7 @@
 title: Prediction MNIST-1D dataset with Mamba
 feed: show
 date: 2024-04-28
-tags: 
+tags: 004/42, 004/7, 004/8, 681/4, 681/5
 publish: true
 ---
 MNIST classification by CNN is not a difficult task, but MNIST-1D converted to 1D from 2D is a different situation. One of the difficulties of MNIST-1D classification comes from long-term memory. The classification by CNN can be used to 28 * 28 pixels but this task should be classified by 1-dimension 784 pixels clearly longer.
@@ -168,3 +168,58 @@ for epoch in range(10):
 	print("test loss: ", test_loss / len(testloader))
 ```
 
+We can see the result as below.
+
+```
+Epoch: 0
+100% 1875/1875 [00:12<00:00, 153.39it/s]
+train loss:  2.007297973759969
+test loss:  1.2626248857083793
+
+Epoch: 1
+100% 1875/1875 [00:12<00:00, 150.18it/s]
+train loss:  0.7616089713652928
+test loss:  0.48858184769702034
+
+Epoch: 2
+100% 1875/1875 [00:12<00:00, 152.72it/s]
+train loss:  0.4489669246673584
+test loss:  0.38821695004693996
+
+Epoch: 3
+100% 1875/1875 [00:12<00:00, 150.30it/s]
+train loss:  0.39068551207383473
+test loss:  0.3567553902276979
+
+Epoch: 4
+100% 1875/1875 [00:12<00:00, 153.96it/s]
+train loss:  0.36337787111997605
+test loss:  0.33719901688182696
+
+Epoch: 5
+100% 1875/1875 [00:12<00:00, 154.69it/s]
+train loss:  0.34521514528393743
+test loss:  0.3230373412370682
+
+Epoch: 6
+100% 1875/1875 [00:12<00:00, 151.86it/s]
+train loss:  0.3320234338223934
+test loss:  0.31317343878241394
+
+Epoch: 7
+100% 1875/1875 [00:12<00:00, 155.58it/s]
+train loss:  0.32165717258850735
+test loss:  0.30604891240977633
+
+Epoch: 8
+100% 1875/1875 [00:12<00:00, 153.68it/s]
+train loss:  0.31338001331885657
+test loss:  0.29762586681082986
+
+Epoch: 9
+100% 1875/1875 [00:12<00:00, 151.90it/s]
+train loss:  0.3063583553204934
+test loss:  0.2924835445781866
+```
+
+[This colab notebook of this post is available here](https://colab.research.google.com/drive/1wOTKQbCD92sUxOS_EM-yfYgcokdXpwyi?usp=sharing)
