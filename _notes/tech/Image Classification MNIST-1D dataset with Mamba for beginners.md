@@ -77,3 +77,44 @@ batch_size = 32
 trainloader, testloader = create_dataloader(batch_size=batch_size)
 ```
 
+Now, we define `MambaMNISTClassifier`
+
+```python
+import torch
+from mamba_ssm import Mamba
+
+  
+class MambaMNISTClassifier(nn.Module):
+	def __init__(
+		self,
+		length,
+		dim,
+		device="cuda"
+	):
+		super().__init__()
+		self.mamba_model = Mamba(
+			# This module uses roughly 3 * expand * d_model^2 parameters
+			d_model=dim, # Model dimension d_model
+			d_state=16, # SSM state expansion factor
+			d_conv=4, # Local convolution width
+			expand=2, # Block expansion factor
+		).to(device)
+		
+		self.classifier = nn.Sequential(
+			nn.Linear(length*dim, 10, ),
+			nn.LogSoftmax(dim=1)
+		).to(device)
+		
+	def forward(self, x):
+		batch_size = x.shape[0]
+		x = self.mamba_model(x)
+		x = x.view(batch_size, -1)
+		x = self.classifier(x)
+		return x
+
+
+length, dim = 784, 1
+model = MambaMNISTClassifier(length, dim)
+```
+
+The dimentsion of our dataset MNIST-1D is 
