@@ -30,4 +30,64 @@ There are several implementations for Mamba with JAX.
 
 `hu-po/jamba` needs more hyper parameters than the official implementation so you should dive deeper inside it.
 
-Thus, this post 
+Thus, this post will show the image classification of MNIST-1D with the official implementation of Mamba.
+
+First of all, we need to `pip install` the official  implementation  of Mamba.
+
+```
+!pip install mamba-ssm
+```
+
+Also, 
+
+load MNIST dataset.
+
+```
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+from torchvision import transforms
+from torchvision.datasets import MNIST
+
+
+def create_dataloader(batch_size):
+
+data_train = torch.utils.data.DataLoader(
+
+MNIST(
+
+'~/mnist_data', train=True, download=True,
+
+transform=transforms.ToTensor(),
+
+),
+
+batch_size=batch_size,
+
+shuffle=True
+
+)
+
+  
+
+data_test = torch.utils.data.DataLoader(
+
+MNIST(
+
+'~/mnist_data', train=False, download=True,
+
+transform=transforms.ToTensor(),
+
+),
+
+batch_size=batch_size,
+
+shuffle=True
+
+)
+
+  
+
+return data_train, data_test
+```
