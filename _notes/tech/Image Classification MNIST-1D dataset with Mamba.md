@@ -30,3 +30,4 @@ There are several implementations for Mamba with JAX.
 
 `hu-po/jamba` needs more hyper parameters than the official implementation so you should dive deeper inside it.
 
+Thus, this post 
