@@ -2,7 +2,7 @@
 title: 知的・技術的進歩のスピードを限界まで加速するノートアプリ『Heptabase』
 feed: show
 date: 2024-04-28
-tags: 
+tags: 004/6,681/3
 publish: true
 ---
 
