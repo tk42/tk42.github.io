@@ -11,6 +11,7 @@ title: About
 
  - "Memo" は tk42 が「見た・聞いた・知った」情報が蓄積された外部記憶領域
  - "Note" は tk42 自身の言葉で書かれ，誰かに読まれることを前提とした整理された知識
+   - English posts are for "Technologies" (some imported from Zenn are Japanese yet) and それ以外は日本語になっております．
 
 この両輪で情報を公開していくことを目指します．詳細は[[アウトプットに注力する]]
 
