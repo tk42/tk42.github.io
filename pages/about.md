@@ -3,6 +3,7 @@ permalink: /about.html
 layout: Post
 content-type: static
 title: About
+tags: 821/7,316/4,316/8,63/9,159/1
 ---
 
 # はじめに
