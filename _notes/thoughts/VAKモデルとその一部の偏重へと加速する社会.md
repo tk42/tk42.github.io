@@ -10,7 +10,7 @@ tags:
 publish: true
 feed: show
 ---
-[VAKモデル](http://edu.city.shimanto.lg.jp/shimanto-l/app/webroot/files/uploads/%E3%81%9F%E3%81%8B%E3%81%AF%E3%81%97%E3%82%B3%E3%83%A9%E3%83%A0%E3%80%80%EF%BC%91.pdf](http://edu.city.shimanto.lg.jp/shimanto-l/app/webroot/files/uploads/%E3%81%9F%E3%81%8B%E3%81%AF%E3%81%97%E3%82%B3%E3%83%A9%E3%83%A0%E3%80%80%EF%BC%91.pdf)で知られているように，人間の学習には3種類ある．
+[VAKモデル](http://edu.city.shimanto.lg.jp/shimanto-l/app/webroot/files/uploads/%E3%81%9F%E3%81%8B%E3%81%AF%E3%81%97%E3%82%B3%E3%83%A9%E3%83%A0%E3%80%80%EF%BC%91.pdf)で知られているように，人間の学習には3種類ある．
  - 視覚
  - 聴覚
  - 身体感覚  
