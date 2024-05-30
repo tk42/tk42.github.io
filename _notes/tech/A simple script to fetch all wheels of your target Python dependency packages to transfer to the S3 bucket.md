@@ -1,7 +1,7 @@
 ---
 title: A simple script to fetch all wheels of your target Python dependency packages to transfer to the S3 bucket
 date: 2024-05-30
-tags: 
+tags: 004/7,004/678,681/3,681/3/06,004/738
 publish: true
 feed: show
 ---
@@ -18,4 +18,8 @@ This server should work on Python and it should be the same platform/version of 
 Also since my office admits to connecting to AWS S3, the service would be better if the dependencies packages are uploaded to AWS S3 after fetched.
 
 I gave permission to my S3 and IAM, then the service seems to be good so far.
+
+You can use this script here.
+
+[GitHub - tk42/pypi-dependencies-downloader](https://github.com/tk42/pypi-dependencies-downloader/tree/main)
 
