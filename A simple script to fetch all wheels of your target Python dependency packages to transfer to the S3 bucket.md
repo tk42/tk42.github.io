@@ -13,3 +13,9 @@ Dependencies are usually nested. To get a package, you need to get other package
 
 So it's tough to resolve it manually obviously. So my idea was a web service to get all wheels of dependencies of a package name when you input.
 That server should connect to the Internet (thus, it can be a web server) and also the server fetches all packages after your request.
+This server should work on Python and it should be the same platform/version of your target library and your environment.
+
+Also since my office admits to connecting to AWS S3, the service would be better if the dependencies packages are uploaded to AWS S3 after fetched.
+
+I gave permission to my S3 and IAM, then the service seems to be good so far.
+
