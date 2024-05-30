@@ -9,4 +9,7 @@ This post is slightly relative to the previous post [[How to install docker-cli 
 
 Since the internet connection restriction in my office, I needed to download all Python wheels of dependency packages from a target library. Usually, you don't need to even think about that if your computer connects to the Internet because the package manager such as `pip` or `poetry` resolves that chore. 
 
-Dependencies are usually nested. 
+Dependencies are usually nested. To get a package, you need to get other packages, to get them to get other packages, to get them to get other packages...
+
+So it's tough to resolve it manually obviously. So my idea was a web service to get all wheels of dependencies of a package name when you input.
+That server should connect to the Internet (thus, it can be a web server) and also the server fetches all packages after your request.
