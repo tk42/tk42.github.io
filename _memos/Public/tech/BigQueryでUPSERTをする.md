@@ -41,16 +41,17 @@ HAVING COUNT(1) > 1
 
 こんな感じで調べられる．350万レコードでも4秒ぐらいで調べられた．
 
-さて，`UPSERT`のための`MERGE`を調べる
+さて，`UPSERT`のための`MERGE`を調べる．一時的なテーブルを`source`はすでにつくられているものとする．
 
 ```
 MERGE INTO {destination_table} AS target
 USING {source_table} AS source
 ON target.Epoch = source.Epoch
 WHEN MATCHED THEN
-  UPDATE SET target.column1 = source.Open, target.High = source.High, target.Low = source.Low, target.Close = source.Close, target.Volume = source.Volume, target.Number = source.Number
-
+  UPDATE SET target.column1 = source.column1, target.column2 = source.column2, ...
 WHEN NOT MATCHED THEN
-
-INSERT (Epoch, Open, High, Low, Close, Volume, Number) VALUES (source.Epoch, source.Open, source.High, source.Low, source.Close, source.Volume, source.Number)
+  INSERT (id, column1, column2, ...) VALUES (source.id, source.column1, source.column2, ...)
+DROP TABLE source
 ```
+
+こんな感じで`UPSERT`は実現できる．
