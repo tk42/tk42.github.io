@@ -36,6 +36,16 @@ The last rule is pretty tedious and seems nonsense. But it can’t be helped. So
 
 In short, at first, the webpage won’t output sound on the iPad caused of rules I & III. In the developer’s strategy, the fake HTML Audio (silence mp3) inside an event listener enables us to output sound at any time (caused by rule II), and then place sounds that we want by Web Audio API (caused by rule IV).
 
+So, here is a sample of code. You can get silence mp3 from [here](https://github.com/anars/blank-audio/blob/master/250-milliseconds-of-silence.mp3)
+
+```javascript
+// Mandatory. Play silence sound on mousedown event to play sound on iPad.
+const playSilence = new Audio("250-milliseconds-of-silence.mp3")
+document.addEventListener('mousedown', () => {
+	playSilence.play()
+})
+```
+
 What a hassle!
 
 ---
