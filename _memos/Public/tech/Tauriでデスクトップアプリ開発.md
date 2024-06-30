@@ -10,3 +10,9 @@ feed: show
 
 [軽量RustフレームワークTauriでデスクトップアプリ開発をはじめよう \| gihyo.jp](https://gihyo.jp/article/2022/10/rust-monthly-topics-02)
 
+> フロントエンドは以下の構成で構築
+>- Nextjs14
+>- tailwind css
+
+[tauri(Rust+Typescript)でプロジェクトフォルダを管理するツール開発](https://zenn.dev/gyabi/articles/ab4f997ed8510e)
+
