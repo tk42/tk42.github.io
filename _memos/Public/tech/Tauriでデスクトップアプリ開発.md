@@ -16,3 +16,5 @@ feed: show
 
 [tauri(Rust+Typescript)でプロジェクトフォルダを管理するツール開発](https://zenn.dev/gyabi/articles/ab4f997ed8510e)
 
+
+[【Next.js】tRPCを使ってみる  |  こーほー活動レポート ～from社員～](https://www.sddgrp.co.jp/blog/technology/use-next-js-trpc/)
