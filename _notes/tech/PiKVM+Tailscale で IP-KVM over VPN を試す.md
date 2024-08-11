@@ -16,9 +16,9 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 
 ## PiKVM
 
-安価なラズパイ本体とHDMIのビデオキャプチャデバイスがあれば，このIP-KVMを実現できるオープンソースソフトウェアが，PiKVM です．
-実際にはソフトウェアというよりも，OSのように振る舞います．
-PiKVMのイメージを書き込んだMicroSDカードでラズパイを起動し，ラズパイがDHCPで取得したIPアドレスを調べた後，の標準のOSとは異なる
+安価なラズパイ本体とHDMIのビデオキャプチャデバイスがあれば，このIP-KVMを実現できるオープンソースソフトウェアが，PiKVM です．ラズパイの上で稼働する専用OSのようなイメージです．
+
+[Flashing OS - PiKVM Handbook](https://docs.pikvm.org/flashing_os/) にあるように，デバイスとPiKVMのバージョンに合わせて適切なOSイメージをダウンロードしてMicroSDカードに書き込む必要があります．
 
 ## KVM-A3
 
