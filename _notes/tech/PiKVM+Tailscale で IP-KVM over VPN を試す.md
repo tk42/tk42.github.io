@@ -22,7 +22,22 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 
 ## KVM-A3
 
-KVM-A3 はPiKVM
+KVM-A3 はPiKVMでIP-KVMを実現するためのハードウェアで，ビデオキャプチャが含まれます．
+
+![](https://m.media-amazon.com/images/I/61HnM25rSLL._AC_SX679_.jpg)
+[Amazon | Geekworm KVM-A3 IP KVMリモートコントロールサーバー操作（外部PC遠隔操作）、Raspberry Pi 4適用 | Geekworm | ベアボーンPC 通販](https://amzn.asia/d/2qqM83O)
+（画像にはラズパイをアタッチしてありますが，このページで買ってもラズパイは付属しません）
+
+---
+
+ラズパイ4がすいしょうされている
+
+`pikvm.txt` 
+
+```
+FIRST_BOOT=1
+WIFI_ESSID='mynet' WIFI_PASSWD='p@s$$w0rd'
+```
 
 ## 参考文献
 [KVMとは？利用メリットとオススメIP-KVMのご紹介｜RSUPPORT株式会社 | アールサポート](https://note.com/rsupport/n/nb7fc5f665602)
