@@ -30,14 +30,17 @@ KVM-A3 はPiKVMでIP-KVMを実現するためのハードウェアで，ビデ�
 
 ---
 
-ラズパイ4がすいしょうされている
+ラズパイ4が推奨されているので，これを手に入れます．次にKVM-A3，ケーブル類を手に入れます．
 
-`pikvm.txt` 
-
+PiKVMをインストールした後，`pikvm.txt` を編集して，家のWifiパスワードを入れておくとスムーズです．
 ```
 FIRST_BOOT=1
 WIFI_ESSID='mynet' WIFI_PASSWD='p@s$$w0rd'
 ```
+
+[On-boot configuration - PiKVM Handbook](https://docs.pikvm.org/on_boot_config/)
+
+
 
 ## 参考文献
 [KVMとは？利用メリットとオススメIP-KVMのご紹介｜RSUPPORT株式会社 | アールサポート](https://note.com/rsupport/n/nb7fc5f665602)
