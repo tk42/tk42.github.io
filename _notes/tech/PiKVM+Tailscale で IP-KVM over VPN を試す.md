@@ -16,9 +16,13 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 
 ## PiKVM
 
-PiKVM はオープンソースソフトウェアで，安価なラズパイ本体とHDMIのビデオキャプチャデバイスがあれば，このIP-KVMを実現できるシロモノです．
+安価なラズパイ本体とHDMIのビデオキャプチャデバイスがあれば，このIP-KVMを実現できるオープンソースソフトウェアが，PiKVM です．
+実際にはソフトウェアというよりも，OSのように振る舞います．
+PiKVMのイメージを書き込んだMicroSDカードでラズパイを起動し，ラズパイがDHCPで取得したIPアドレスを調べた後，の標準のOSとは異なる
 
+## KVM-A3
 
+KVM-A3 はPiKVM
 
 ## 参考文献
 [KVMとは？利用メリットとオススメIP-KVMのご紹介｜RSUPPORT株式会社 | アールサポート](https://note.com/rsupport/n/nb7fc5f665602)
