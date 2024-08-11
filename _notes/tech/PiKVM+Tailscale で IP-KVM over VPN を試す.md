@@ -12,4 +12,15 @@ KVMとは Keyboard・Video・Mouse の略で，サーバやPCのキーボード�
 
 一般的なKVMは遠隔での管理・操作ができませんが，IP-KVMであればネットワークを通じて遠隔でサーバに接続することができ，物理的にアクセスが難しい場合であっても，遠隔で接続して制御することができます．
 
-TeamsやGoogle Meetでの画面操作はOSが立ち上がっている状況でしか使えませんが，IP-KVMはOSの起動 
+OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google Chromeでのリモートデスクトップ](https://support.google.com/chrome/answer/1649523?hl=ja&co=GENIE.Platform%3DDesktop)での画面操作が利用できますが，例えば専用OSでの遠隔操作を実現したい場合はIP-KVMが選択肢となってきます．
+
+## PiKVM
+
+PiKVM はオープンソースソフトウェアで，安価なラズパイ本体とHDMIのビデオキャプチャデバイスがあれば，このIP-KVMを実現できるシロモノです．
+
+
+
+## 参考文献
+[KVMとは？利用メリットとオススメIP-KVMのご紹介｜RSUPPORT株式会社 | アールサポート](https://note.com/rsupport/n/nb7fc5f665602)
+
+[リモートKVMをラズパイで実現する「PiKVM」を試した - RemoteRoom](https://remoteroom.jp/diary/2021-12-19/)
