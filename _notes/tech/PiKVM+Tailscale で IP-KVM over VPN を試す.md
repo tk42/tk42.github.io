@@ -28,26 +28,29 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 ラズパイ4.0が推奨されているので，本記事ではこちらを利用します．
 
 ![](https://m.media-amazon.com/images/I/51ETv8Le3nL._AC_.jpg)
+
 [Amazon.co.jp: 【国内正規代理店品】Raspberry Pi4 ModelB 4GB ラズベリーパイ4 技適対応品【RS・OKdo版】 : パソコン・周辺機器](https://amzn.asia/d/aBj2KvR)
 
 
 ## ~~KVM-A3~~ 失敗しました
+
+~~KVM-A3 はPiKVMでIP-KVMを実現するためのハードウェアで，ビデオキャプチャが含まれます．~~
+
+~~[Amazon \| Geekworm KVM-A3 IP KVMリモートコントロールサーバー操作（外部PC遠隔操作）、Raspberry Pi 4適用 \| Geekworm \| ベアボーンPC 通販](https://amzn.asia/d/2qqM83O)~~
+
+~~（画像にはラズパイをアタッチしてありますが，このページで買ってもラズパイは付属しません）~~
 
 このビデオキャプチャの入力信号は **HDMI 50Hz** である必要があります．
 リフレッシュレートは日本とアメリカは **60Hz** , ヨーロッパが **50Hz** と言われています．
 リフレッシュレートの変換設定を探しましたが私のターゲットPCには見つからず，お蔵入りとなりました．
 ターゲットのPCが **50Hz** で出力できるのであれば選択肢となります．
 
-~~KVM-A3 はPiKVMでIP-KVMを実現するためのハードウェアで，ビデオキャプチャが含まれます．~~
-
-~~[Amazon | Geekworm KVM-A3 IP KVMリモートコントロールサーバー操作（外部PC遠隔操作）、Raspberry Pi 4適用 | Geekworm | ベアボーンPC 通販](https://amzn.asia/d/2qqM83O)
-（画像にはラズパイをアタッチしてありますが，このページで買ってもラズパイは付属しません）~~
-
 ## THANKO SHDSLRVC
 
-[一眼カメラやビデオカメラをWEBカメラに！「HDMI to USB WEBカメラアダプタ」 | 【公式】サンコー通販サイト](https://www.thanko.jp/view/item/000000003615)
+[一眼カメラやビデオカメラをWEBカメラに！「HDMI to USB WEBカメラアダプタ」 \| 【公式】サンコー通販サイト](https://www.thanko.jp/view/item/000000003615)
 
 ![](https://m.media-amazon.com/images/I/61OzbprGOnL._AC_SX679_.jpg)
+
 [Amazon.co.jp: サンコー(Sanko) レアモノショップ 一眼カメラやビデオカメラをWEBカメラに!「HDMI to USB WEBカメラアダプタ」 : パソコン・周辺機器](https://amzn.asia/d/4fe105g)
 
 ビデオキャプチャデバイスはこちらを利用することにしました．
@@ -59,10 +62,13 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 ケーブルの接続先をまとめると次のようになります．
 
 | 種別                | ターゲットPC | ケーブル            | ラズパイ       |
-| :---------------- | ------- | --------------- | ---------- |
+| :---------------- | :------- | :--------------- | :---------- |
 | HDMI              | HDMI出力  | THANKO SHDSLRVC | USB**2.0** |
 | データ（キーボード・マウス）・給電 | USB2.0  | USB3.0オスオスケーブル  | USB-C      |
-HDMI のビデオキャプチャデバイスのUSB接続先を **USB2.0** に接続しないと NO SIGNAL となりました．また今回試したいOSはLinuxだったのですが最初挙動不審でした．そこでWindowsのディスプレイの設定で50Hzに設定することで動作確認をし，それからLinuxをブートするようにすると問題なく表示されるようになりました．
+
+個人的なハマりポイントはHDMI のビデオキャプチャデバイスのUSB接続先を **USB2.0** に接続しないと NO SIGNAL となりました．
+
+また今回試したいOSはLinuxだったのですが最初挙動不審でした．そこでWindowsのディスプレイの設定で50Hzに設定することで動作確認をし，それからLinuxをブートするようにすると問題なく表示されるようになりました．
 
 ラズパイはUSB給電なのでターゲットPCの電源をOFFにするとラズパイも強制切断されます．
 私の場合，強制切断でも問題ないため上２段の2本構成にしていますが，これを防ぐには次の方法が取れます．
@@ -70,7 +76,8 @@ HDMI のビデオキャプチャデバイスのUSB接続先を **USB2.0** に接
  - 給電用の線が出ているY字型のUSBケーブルを用意する
 
 ![](https://m.media-amazon.com/images/I/71z8gLK081L._AC_SX679_.jpg)
-[Amazon | アイ・オー・データ USB電源補助ケーブル 電力供給 日本メーカー UPAC-UT07M ブラック | アイ・オー・データ | USBケーブル 通販](https://amzn.asia/d/36S5MOd)
+
+[Amazon \| アイ・オー・データ USB電源補助ケーブル 電力供給 日本メーカー UPAC-UT07M ブラック \| アイ・オー・データ \| USBケーブル 通販](https://amzn.asia/d/36S5MOd)
 
 
 ---
@@ -82,7 +89,7 @@ HDMI のビデオキャプチャデバイスのUSB接続先を **USB2.0** に接
 - ラズパイ4.0
 - THANKO SHDSLRVC
 - MicroSDカード（PiKVMインストール用）
-- USB3.0 ケーブル
+- USB2.0 - USB-C ケーブル
 - HDMIケーブル
 
 ### PiKVMのインストール
