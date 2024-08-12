@@ -63,7 +63,7 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 ![](https://m.media-amazon.com/images/I/71z8gLK081L._AC_SX679_.jpg)
 [Amazon | アイ・オー・データ USB電源補助ケーブル 電力供給 日本メーカー UPAC-UT07M ブラック | アイ・オー・データ | USBケーブル 通販](https://amzn.asia/d/36S5MOd)
 
-ちなみに，ネットワークはWifiを利用予定のためLANケーブルは接続しませんでした．
+ちなみにネットワークはWifiを利用予定のためLANケーブルは接続しませんでした（後述）
 
 ---
 
@@ -81,19 +81,22 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 
 [Flashing OS - PiKVM Handbook](https://docs.pikvm.org/flashing_os/) にあるように，デバイスとPiKVMのバージョンに合わせて適切なOSイメージをダウンロードしてMicroSDカードに書き込む必要があります．
 
-今回の構成では `v2-hdmiusb-rpi4-latest.img.xz` を書き込むことになります．
+今回の構成では， 
+>- **Raspberry Pi 4**
+    - [For HDMI-USB dongle](https://files.pikvm.org/images/v2-hdmiusb-rpi4-latest.img.xz)
 
+にある `v2-hdmiusb-rpi4-latest.img.xz` を書き込むことになります．
 
-イメージの書き込み
+イメージの書き込みは，[Flashing OS - PiKVM Handbook](https://docs.pikvm.org/flashing_os/#using-linux-cli-advanced-users) を見ると良いと思います．
 
-PiKVMをインストールした後，`pikvm.txt` を編集して，家のWifiパスワードを入れておくとスムーズです．
+ネットワークはWifiを利用するため，[On-boot configuration - PiKVM Handbook](https://docs.pikvm.org/on_boot_config/)を参考に事前にwifiパスワードを入れておきます．
+PiKVMをインストールした後，MicroSDを見るとルートディレクトリに `pikvm.txt` というファイルがあります．これを編集して，Wifiパスワードを設定します．
 ```
 FIRST_BOOT=1
 WIFI_ESSID='mynet'
 WIFI_PASSWD='p@s$$w0rd'
 ```
 
-[On-boot configuration - PiKVM Handbook](https://docs.pikvm.org/on_boot_config/)
 
 
 
