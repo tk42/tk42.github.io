@@ -18,7 +18,11 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 
 安価なラズパイ本体とHDMIのビデオキャプチャデバイスがあれば，このIP-KVMを実現できるオープンソースソフトウェアが，PiKVM です．ラズパイの上で稼働する専用OSのようなイメージです．
 
-[Flashing OS - PiKVM Handbook](https://docs.pikvm.org/flashing_os/) にあるように，デバイスとPiKVMのバージョンに合わせて適切なOSイメージをダウンロードしてMicroSDカードに書き込む必要があります．
+ラズパイ4.0が推奨されているので，本記事ではこちらを利用します．
+
+![](https://m.media-amazon.com/images/I/51ETv8Le3nL._AC_.jpg)
+[Amazon.co.jp: 【国内正規代理店品】Raspberry Pi4 ModelB 4GB ラズベリーパイ4 技適対応品【RS・OKdo版】 : パソコン・周辺機器](https://amzn.asia/d/aBj2KvR)
+
 
 ## ~~KVM-A3~~ 失敗しました
 
@@ -44,19 +48,25 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 
 ---
 
-## 接続先
+## ケーブル接続
 
-接続先をまとめると次のようになります．
+ケーブルの接続先をまとめると次のようになります．
 
-| 種別   | ターゲットPC | 中継  |
-| :--- | ------- | --- |
-| HDMI | HDMI出力  |     |
+| 種別             | ターゲットPC | ケーブル            | ラズパイ   |
+| :------------- | ------- | --------------- | ------ |
+| HDMI           | HDMI出力  | THANKO SHDSLRVC | USB3.0 |
+| データ（キーボード・マウス） | USB     | USBオスオスケーブル     | USB    |
+| 電源             | USB     | USBオスオスケーブル     | USB    |
 
-ターゲットPCのHDMI出力を，ラズパイのUSB3.0に接続します．
+注意点としてはラズパイはUSB給電なので，USBポートを電源とデータ（キーボードとマウス）とで2ポート専有してしまうことです．
 
 ---
 
 ラズパイ4が推奨されているので，これを手に入れます．他にKVM-A3，PiKVMインストール用のMicroSDカード，ケーブル類を手に入れます．
+
+
+[Flashing OS - PiKVM Handbook](https://docs.pikvm.org/flashing_os/) にあるように，デバイスとPiKVMのバージョンに合わせて適切なOSイメージをダウンロードしてMicroSDカードに書き込む必要があります．
+
 
 PiKVMをインストールした後，`pikvm.txt` を編集して，家のWifiパスワードを入れておくとスムーズです．
 ```
