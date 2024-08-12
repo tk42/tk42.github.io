@@ -20,13 +20,18 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 
 [Flashing OS - PiKVM Handbook](https://docs.pikvm.org/flashing_os/) にあるように，デバイスとPiKVMのバージョンに合わせて適切なOSイメージをダウンロードしてMicroSDカードに書き込む必要があります．
 
-## KVM-A3
+## ~~KVM-A3~~ 失敗しました
 
-KVM-A3 はPiKVMでIP-KVMを実現するためのハードウェアで，ビデオキャプチャが含まれます．
+このビデオキャプチャの入力信号は **HDMI 50Hz** である必要があります．
+リフレッシュレートは日本とアメリカは **60Hz** , ヨーロッパが **50Hz** と言われています．変換器
+リフレッシュレートの変換設定を探しましたが私のターゲットPCには見つからず，お蔵入りとなりました．
+ターゲットのPCが **50Hz** で出力できるのであれば選択肢となります．
+
+~~KVM-A3 はPiKVMでIP-KVMを実現するためのハードウェアで，ビデオキャプチャが含まれます．~~
 
 ![](https://m.media-amazon.com/images/I/61HnM25rSLL._AC_SX679_.jpg)
-[Amazon | Geekworm KVM-A3 IP KVMリモートコントロールサーバー操作（外部PC遠隔操作）、Raspberry Pi 4適用 | Geekworm | ベアボーンPC 通販](https://amzn.asia/d/2qqM83O)
-（画像にはラズパイをアタッチしてありますが，このページで買ってもラズパイは付属しません）
+~~[Amazon | Geekworm KVM-A3 IP KVMリモートコントロールサーバー操作（外部PC遠隔操作）、Raspberry Pi 4適用 | Geekworm | ベアボーンPC 通販](https://amzn.asia/d/2qqM83O)
+（画像にはラズパイをアタッチしてありますが，このページで買ってもラズパイは付属しません）~~
 
 ---
 
