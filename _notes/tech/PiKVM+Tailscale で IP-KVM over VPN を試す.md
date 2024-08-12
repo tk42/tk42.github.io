@@ -101,9 +101,17 @@ HDMI のビデオキャプチャデバイスのUSB接続先を **USB2.0** に接
 
 ## Tailscale セットアップ手順
 
+TailscaleはVPNを構築することができるサービスです．無料です．
+
+> Tailscaleはクライアント側のソースをGitHub上で公開することで、クライアントが暗号化キーを一切サーバーへ送信していないことを証明しているため安全なのだと言います。
+[Tailscaleで無料で簡単、VPNを構築するぞ](https://zenn.dev/0_0/articles/16975274aa3ba7)
+
+OSSの思想を体現したようなサービスモデルですね．
 Tailscaleを使うことでVPNを構築できるため，通常のインターネット回線を用いて，たったいま構築したIP-KVMにアクセスすることができます．
 
+各種OS（PC・スマホ）に対応する公式クライアントアプリがあるため，アクセスする端末ではこれを利用します．
 
+PiKVM側にTailscaleクライアントをインストールするのも [Tailscale VPN - PiKVM Handbook](https://docs.pikvm.org/tailscale/) を参考にすればとても簡単にできました（最初の`pikvm-update` が，）
 
 ## 参考文献
 [KVMとは？利用メリットとオススメIP-KVMのご紹介｜RSUPPORT株式会社 | アールサポート](https://note.com/rsupport/n/nb7fc5f665602)
