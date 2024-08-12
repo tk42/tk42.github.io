@@ -1,3 +1,10 @@
+---
+title: PiKVM+Tailscale で IP-KVM over VPN を試す
+date: 2024-08-12
+tags: 004/7,004/78,621/38,681/3,681/32
+publish: true
+feed: show
+---
 ## KVM
 
 KVMとは Keyboard・Video・Mouse の略で，サーバやPCのキーボード，モニター，マウスを管理するための制御技術やデバイスのことです．
@@ -119,6 +126,7 @@ PiKVM側にTailscaleクライアントをインストールするのも [Tailsca
 
 **最高です！！！** 
 
+無意味にスマホにもTailscaleを入れました．これまで持ち歩いていたPCを自宅に置いておき，文字通りどこからも使えるようになりました！
 
 ## 参考文献
 [KVMとは？利用メリットとオススメIP-KVMのご紹介｜RSUPPORT株式会社 | アールサポート](https://note.com/rsupport/n/nb7fc5f665602)
