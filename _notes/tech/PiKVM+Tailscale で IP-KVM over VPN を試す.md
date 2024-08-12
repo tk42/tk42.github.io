@@ -87,7 +87,7 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 
 にある `v2-hdmiusb-rpi4-latest.img.xz` を書き込むことになります．
 
-イメージの書き込みは，[Flashing OS - PiKVM Handbook](https://docs.pikvm.org/flashing_os/#using-linux-cli-advanced-users) を見ると良いと思います．
+イメージの書き込み方法は，[Flashing OS - PiKVM Handbook](https://docs.pikvm.org/flashing_os/#using-linux-cli-advanced-users) を見ると良いと思います．
 
 ネットワークはWifiを利用するため，[On-boot configuration - PiKVM Handbook](https://docs.pikvm.org/on_boot_config/)を参考に事前にwifiパスワードを入れておきます．
 PiKVMをインストールした後，MicroSDを見るとルートディレクトリに `pikvm.txt` というファイルがあります．これを編集して，Wifiパスワードを設定します．
