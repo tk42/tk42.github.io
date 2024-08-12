@@ -111,7 +111,14 @@ Tailscaleを使うことでVPNを構築できるため，通常のインター�
 
 各種OS（PC・スマホ）に対応する公式クライアントアプリがあるため，アクセスする端末ではこれを利用します．
 
-PiKVM側にTailscaleクライアントをインストールするのも [Tailscale VPN - PiKVM Handbook](https://docs.pikvm.org/tailscale/) を参考にすればとても簡単にできました（最初の`pikvm-update` が，）
+PiKVM側にTailscaleクライアントをインストールするのも [Tailscale VPN - PiKVM Handbook](https://docs.pikvm.org/tailscale/) を参考にすればとても簡単にできました
+
+（最初の`pikvm-update` がレポジトリサーバのレスポンスが遅くタイムアウトになることがあります．日本の時間帯の夜9時頃に試すとうまくいきました．サーバー増強して欲しい…）
+
+## 使い勝手
+
+**最高です！！！** 
+
 
 ## 参考文献
 [KVMとは？利用メリットとオススメIP-KVMのご紹介｜RSUPPORT株式会社 | アールサポート](https://note.com/rsupport/n/nb7fc5f665602)
