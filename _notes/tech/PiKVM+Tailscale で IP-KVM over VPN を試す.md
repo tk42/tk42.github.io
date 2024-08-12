@@ -63,7 +63,6 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 ![](https://m.media-amazon.com/images/I/71z8gLK081L._AC_SX679_.jpg)
 [Amazon | アイ・オー・データ USB電源補助ケーブル 電力供給 日本メーカー UPAC-UT07M ブラック | アイ・オー・データ | USBケーブル 通販](https://amzn.asia/d/36S5MOd)
 
-ちなみにネットワークはWifiを利用予定のためLANケーブルは接続しませんでした（後述）
 
 ---
 
@@ -87,17 +86,11 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 
 にある `v2-hdmiusb-rpi4-latest.img.xz` を書き込むことになります．
 
-イメージの書き込み方法は，[Flashing OS - PiKVM Handbook](https://docs.pikvm.org/flashing_os/#using-linux-cli-advanced-users) を見ると良いと思います．
+イメージの書き込み方法は [Flashing OS - PiKVM Handbook](https://docs.pikvm.org/flashing_os/#using-linux-cli-advanced-users) を見ると良いと思います．
 
-ネットワークはWifiを利用するため，[On-boot configuration - PiKVM Handbook](https://docs.pikvm.org/on_boot_config/)を参考に事前にwifiパスワードを入れておきます．
-PiKVMをインストールした後，MicroSDを見るとルートディレクトリに `pikvm.txt` というファイルがあります．これを編集して，Wifiパスワードを設定します．
-```
-FIRST_BOOT=1
-WIFI_ESSID='mynet'
-WIFI_PASSWD='p@s$$w0rd'
-```
+有線LANほど確実なものはないですが，Wifiで進めることもできます．詳細は[On-boot configuration - PiKVM Handbook](https://docs.pikvm.org/on_boot_config/)を参考
 
-MicroSDにラズパイをセットして，電源ケーブルを接続します．ラズパイのローカルIPアドレスをルータ画面や`arp -a`で得た後，そのIPアドレスにWebブラウザからアクセスすると
+最後にMicroSDにラズパイをセットして，電源ケーブルを接続します．ラズパイのローカルIPアドレスをルータ画面や`arp -a`で得た後，そのIPアドレスにWebブラウザからアクセスすると
 
 ![[../../assets/img/Public/Screenshot 2024-08-11 at 19.52.33.png]]
 
