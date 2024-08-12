@@ -108,7 +108,7 @@ OSイメージの具体的な書き込み方法は [Flashing OS - PiKVM Handbook
 
 最後にMicroSDにラズパイをセットして，電源ケーブルを接続します．ラズパイのローカルIPアドレスをルータ画面や`arp -a`で得た後，そのIPアドレスにWebブラウザからアクセスすると
 
-![[../../assets/img/Public/Screenshot 2024-08-11 at 19.52.33.png]]
+![](../../assets/img/Public/Screenshot 2024-08-11 at 19.52.33.png)
 
 と表示されます．（ローカルIPは `192.168.8.165`）
 
@@ -132,7 +132,7 @@ PiKVM側にTailscaleクライアントをインストールするのも [Tailsca
 
 ## 使い勝手
 
-![[FFDCBB20-36D9-44B9-8ACF-029EBF030A17_4_5005_c.jpeg]]
+![](../../assets/img/Public/FFDCBB20-36D9-44B9-8ACF-029EBF030A17_4_5005_c.jpeg)
 
 **最高です！！！** 
 
