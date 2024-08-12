@@ -63,13 +63,13 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 ![](https://m.media-amazon.com/images/I/71z8gLK081L._AC_SX679_.jpg)
 [Amazon | アイ・オー・データ USB電源補助ケーブル 電力供給 日本メーカー UPAC-UT07M ブラック | アイ・オー・データ | USBケーブル 通販](https://amzn.asia/d/36S5MOd)
 
-ちなみに，ネットワークはWifi
-
+ちなみに，ネットワークはWifiを利用予定のためLANケーブルは接続しませんでした．
 
 ---
 
 ## 手順
 
+### 用意するもの
 必要なものを再掲します
 - ラズパイ4.0
 - THANKO SHDSLRVC
@@ -77,14 +77,20 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 - USB3.0 ケーブル
 - HDMIケーブル
 
+### PiKVMのインストール
 
 [Flashing OS - PiKVM Handbook](https://docs.pikvm.org/flashing_os/) にあるように，デバイスとPiKVMのバージョンに合わせて適切なOSイメージをダウンロードしてMicroSDカードに書き込む必要があります．
 
+今回の構成では `v2-hdmiusb-rpi4-latest.img.xz` を書き込むことになります．
+
+
+イメージの書き込み
 
 PiKVMをインストールした後，`pikvm.txt` を編集して，家のWifiパスワードを入れておくとスムーズです．
 ```
 FIRST_BOOT=1
-WIFI_ESSID='mynet' WIFI_PASSWD='p@s$$w0rd'
+WIFI_ESSID='mynet'
+WIFI_PASSWD='p@s$$w0rd'
 ```
 
 [On-boot configuration - PiKVM Handbook](https://docs.pikvm.org/on_boot_config/)
