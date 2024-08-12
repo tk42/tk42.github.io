@@ -109,3 +109,10 @@ Tailscaleを使うことでVPNを構築できるため，通常のインター�
 [KVMとは？利用メリットとオススメIP-KVMのご紹介｜RSUPPORT株式会社 | アールサポート](https://note.com/rsupport/n/nb7fc5f665602)
 
 [リモートKVMをラズパイで実現する「PiKVM」を試した - RemoteRoom](https://remoteroom.jp/diary/2021-12-19/)
+
+[PiKVMのインストール #Linux - Qiita](https://qiita.com/naosone/items/dbbfe7989063ed13a2fb)
+
+[憧れのKVM over IPを手軽？に導入 - PiKVM v3 HAT - Raspberry Pi based open-source KVM over IPのレビュー | ジグソー | レビューメディア](https://zigsow.jp/item/361953/review/372633)
+
+[Tailscaleで無料で簡単、VPNを構築するぞ](https://zenn.dev/0_0/articles/16975274aa3ba7)
+
