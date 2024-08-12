@@ -102,13 +102,13 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 
 にある `v2-hdmiusb-rpi4-latest.img.xz` を書き込むことになります．
 
-イメージの書き込み方法は [Flashing OS - PiKVM Handbook](https://docs.pikvm.org/flashing_os/#using-linux-cli-advanced-users) を見ると良いと思います．
+OSイメージの具体的な書き込み方法は [Flashing OS - PiKVM Handbook](https://docs.pikvm.org/flashing_os/#using-linux-cli-advanced-users) を参考にすれば簡単にできました．
 
 有線LANほど確実なものはないですが，Wifiで進めることもできます．詳細は[On-boot configuration - PiKVM Handbook](https://docs.pikvm.org/on_boot_config/)を参考
 
 最後にMicroSDにラズパイをセットして，電源ケーブルを接続します．ラズパイのローカルIPアドレスをルータ画面や`arp -a`で得た後，そのIPアドレスにWebブラウザからアクセスすると
 
-![[../../assets/img/Public/Screenshot 2024-08-11 at 19.52.33.png]]
+![[../../../assets/img/Public/Screenshot 2024-08-11 at 19.52.33.png]]
 
 と表示されます．（ローカルIPは `192.168.8.165`）
 
@@ -118,7 +118,8 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 TailscaleはVPNを構築することができるサービスです．無料です．
 
 > Tailscaleはクライアント側のソースをGitHub上で公開することで、クライアントが暗号化キーを一切サーバーへ送信していないことを証明しているため安全なのだと言います。
-[Tailscaleで無料で簡単、VPNを構築するぞ](https://zenn.dev/0_0/articles/16975274aa3ba7)
+> 
+> [Tailscaleで無料で簡単、VPNを構築するぞ](https://zenn.dev/0_0/articles/16975274aa3ba7)
 
 OSSの思想を体現したようなサービスモデルですね．
 Tailscaleを使うことでVPNを構築できるため，通常のインターネット回線を用いて，たったいま構築したIP-KVMにアクセスすることができます．
@@ -135,14 +136,16 @@ PiKVM側にTailscaleクライアントをインストールするのも [Tailsca
 
 無意味にスマホにもTailscaleを入れました．これまで持ち歩いていたPCを自宅に置いておき，文字通りどこからも使えるようになりました！
 
+もう一台用意しても良いかもしれない…
+
 ## 参考文献
-[KVMとは？利用メリットとオススメIP-KVMのご紹介｜RSUPPORT株式会社 | アールサポート](https://note.com/rsupport/n/nb7fc5f665602)
+[KVMとは？利用メリットとオススメIP-KVMのご紹介｜RSUPPORT株式会社 \| アールサポート](https://note.com/rsupport/n/nb7fc5f665602)
 
 [リモートKVMをラズパイで実現する「PiKVM」を試した - RemoteRoom](https://remoteroom.jp/diary/2021-12-19/)
 
 [PiKVMのインストール #Linux - Qiita](https://qiita.com/naosone/items/dbbfe7989063ed13a2fb)
 
-[憧れのKVM over IPを手軽？に導入 - PiKVM v3 HAT - Raspberry Pi based open-source KVM over IPのレビュー | ジグソー | レビューメディア](https://zigsow.jp/item/361953/review/372633)
+[憧れのKVM over IPを手軽？に導入 - PiKVM v3 HAT - Raspberry Pi based open-source KVM over IPのレビュー \| ジグソー \| レビューメディア](https://zigsow.jp/item/361953/review/372633)
 
 [Tailscaleで無料で簡単、VPNを構築するぞ](https://zenn.dev/0_0/articles/16975274aa3ba7)
 
