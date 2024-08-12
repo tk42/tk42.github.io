@@ -33,7 +33,6 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 
 ~~KVM-A3 はPiKVMでIP-KVMを実現するためのハードウェアで，ビデオキャプチャが含まれます．~~
 
-![](https://m.media-amazon.com/images/I/61HnM25rSLL._AC_SX679_.jpg)
 ~~[Amazon | Geekworm KVM-A3 IP KVMリモートコントロールサーバー操作（外部PC遠隔操作）、Raspberry Pi 4適用 | Geekworm | ベアボーンPC 通販](https://amzn.asia/d/2qqM83O)
 （画像にはラズパイをアタッチしてありますが，このページで買ってもラズパイは付属しません）~~
 
@@ -59,15 +58,24 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 | （給電）              | USB     | USBオスオスケーブル     | USB    |
 
 ラズパイはUSB給電なのでターゲットPCの電源をOFFにするとラズパイも強制切断されます．
-私の場合，強制切断でも問題ないため上２段の2本構成にしていますが，これを防ぐには最下段のように別のUSB給電ケーブルを用意するか，
+私の場合，強制切断でも問題ないため上２段の2本構成にしていますが，これを防ぐには最下段のように別のUSB給電ケーブルを用意するか，Y字型のUSBケーブルで給電用の線が出ているものを用意するとコンパクトになります．
 
-USBポートを電源・データ（キーボードとマウス）・モニタとで3ポート専有してしまうことです．
+![](https://m.media-amazon.com/images/I/71z8gLK081L._AC_SX679_.jpg)
+[Amazon | アイ・オー・データ USB電源補助ケーブル 電力供給 日本メーカー UPAC-UT07M ブラック | アイ・オー・データ | USBケーブル 通販](https://amzn.asia/d/36S5MOd)
 
+ちなみに，ネットワークはWifi
 
 
 ---
 
-ラズパイ4が推奨されているので，これを手に入れます．他にKVM-A3，PiKVMインストール用のMicroSDカード，ケーブル類を手に入れます．
+## 手順
+
+必要なものを再掲します
+- ラズパイ4.0
+- THANKO SHDSLRVC
+- MicroSDカード（PiKVMインストール用）
+- USB3.0 ケーブル
+- HDMIケーブル
 
 
 [Flashing OS - PiKVM Handbook](https://docs.pikvm.org/flashing_os/) にあるように，デバイスとPiKVMのバージョンに合わせて適切なOSイメージをダウンロードしてMicroSDカードに書き込む必要があります．
