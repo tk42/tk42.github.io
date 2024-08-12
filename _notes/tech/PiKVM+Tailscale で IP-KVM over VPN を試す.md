@@ -23,7 +23,7 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 ## ~~KVM-A3~~ 失敗しました
 
 このビデオキャプチャの入力信号は **HDMI 50Hz** である必要があります．
-リフレッシュレートは日本とアメリカは **60Hz** , ヨーロッパが **50Hz** と言われています．変換器
+リフレッシュレートは日本とアメリカは **60Hz** , ヨーロッパが **50Hz** と言われています．
 リフレッシュレートの変換設定を探しましたが私のターゲットPCには見つからず，お蔵入りとなりました．
 ターゲットのPCが **50Hz** で出力できるのであれば選択肢となります．
 
@@ -32,6 +32,27 @@ OSが立ち上がっている状況であれば，TeamsやGoogle Meet，[Google 
 ![](https://m.media-amazon.com/images/I/61HnM25rSLL._AC_SX679_.jpg)
 ~~[Amazon | Geekworm KVM-A3 IP KVMリモートコントロールサーバー操作（外部PC遠隔操作）、Raspberry Pi 4適用 | Geekworm | ベアボーンPC 通販](https://amzn.asia/d/2qqM83O)
 （画像にはラズパイをアタッチしてありますが，このページで買ってもラズパイは付属しません）~~
+
+## THANKO SHDSLRVC
+
+[一眼カメラやビデオカメラをWEBカメラに！「HDMI to USB WEBカメラアダプタ」 | 【公式】サンコー通販サイト](https://www.thanko.jp/view/item/000000003615)
+
+![](https://m.media-amazon.com/images/I/61OzbprGOnL._AC_SX679_.jpg)
+[Amazon.co.jp: サンコー(Sanko) レアモノショップ 一眼カメラやビデオカメラをWEBカメラに!「HDMI to USB WEBカメラアダプタ」 : パソコン・周辺機器](https://amzn.asia/d/4fe105g)
+
+ビデオキャプチャデバイスはこちらを利用することにしました．
+
+---
+
+## 接続先
+
+接続先をまとめると次のようになります．
+
+| 種別   | ターゲットPC | 中継  |
+| :--- | ------- | --- |
+| HDMI | HDMI出力  |     |
+
+ターゲットPCのHDMI出力を，ラズパイのUSB3.0に接続します．
 
 ---
 
