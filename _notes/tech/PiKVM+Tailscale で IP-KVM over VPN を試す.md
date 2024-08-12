@@ -97,7 +97,11 @@ WIFI_ESSID='mynet'
 WIFI_PASSWD='p@s$$w0rd'
 ```
 
+MicroSDにラズパイをセットして，電源ケーブルを接続します．ラズパイのローカルIPアドレスをルータ画面や`arp -a`で得た後，そのIPアドレスにWebブラウザからアクセスすると
 
+![[../../assets/img/Public/Screenshot 2024-08-11 at 19.52.33.png]]
+
+と表示されます．（ローカルIPは `192.168.8.165`）
 
 
 ## 参考文献
