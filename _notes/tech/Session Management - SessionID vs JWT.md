@@ -1,3 +1,10 @@
+---
+title: Session Management - SessionID vs JWT
+date: 2024-08-27
+tags: 004/7,004/72,004/738,004/738/2,004/738/3
+publish: true
+feed: show
+---
 ### Introduction
 In web applications, a **session** is a way to persist user-specific data across multiple requests. When a user logs into a website, the session helps the server remember the user’s identity and preferences, enabling a seamless experience as they navigate through different pages. Effective session management is crucial for maintaining security and user experience.
 
