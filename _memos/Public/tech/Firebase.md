@@ -1,3 +1,15 @@
+---
+title: Firebase
+feed: show
+date: 2024-10-05
+tags:
+  - 004/678
+  - 004/678/1
+  - 004/678/2
+  - 004/678/3
+  - 004/678/4
+publish: true
+---
 
 > Next.jsとFirebaseの認証機能であるFirebase Authenticationを使って、
 > - ユーザー登録
