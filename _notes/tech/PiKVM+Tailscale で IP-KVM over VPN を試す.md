@@ -5,6 +5,18 @@ tags: 004/7,004/78,621/38,681/3,681/32
 publish: true
 feed: show
 ---
+## 追記 (8 Sep. 2024)
+
+THANKO SHDSLRVC でUSB接続しましたが，画像出力がうまくいかないことがあり利用をやめました．
+
+AliExpressで購入したBLIKVMが簡単でした．
+[BLIKVM HAT ガイド - BLIKVM ハンドブック](https://wiki.blicube.com/blikvm/ja/BLIKVM-HAT-guide/)
+
+#### 注意
+日本語版のOSイメージリンクは古いので，英語版ページを確認する．
+[https://zcwrego195.feishu.cn/drive/folder/fldcn0KhmkuC2DC8nKWcHAMLA6f](https://zcwrego195.feishu.cn/drive/folder/fldcn0KhmkuC2DC8nKWcHAMLA6f)
+
+
 ## KVM
 
 KVMとは Keyboard・Video・Mouse の略で，サーバやPCのキーボード，モニター，マウスを管理するための制御技術やデバイスのことです．
