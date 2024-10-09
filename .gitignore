@@ -1,8 +1,9 @@
 _site
 .jekyll-cache
 .DS_Store
-pages/tags.md
 _memos/*
 !_memos/Public/
 !_memos/SearchData.json
 .obsidian
+*.md
+!./README.md
