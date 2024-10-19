@@ -5,5 +5,5 @@ _memos/*
 !_memos/Public/
 !_memos/SearchData.json
 .obsidian
-*.md
+/*.md
 !./README.md
