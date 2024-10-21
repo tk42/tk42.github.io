@@ -5,6 +5,11 @@ tags: 004/7,004/78,621/38,681/3,681/32
 publish: true
 feed: show
 ---
+## 追記 (21 Oct. 2024)
+
+マウスジグラー機能があるのでメモ
+[Mouse jiggler - PiKVM Handbook](https://docs.pikvm.org/mouse_jiggler/?h=mouse#description-of-the-algorithm)
+
 ## 追記 (8 Sep. 2024)
 
 THANKO SHDSLRVC でUSB接続しましたが，画像出力がうまくいかないことがあり利用をやめました．
