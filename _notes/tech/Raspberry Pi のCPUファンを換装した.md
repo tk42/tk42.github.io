@@ -9,13 +9,13 @@ PiKVMで運用している Raspberry Pi 4 の最初からついていたファ�
 
 最初はたまに変な音をするぐらいだったのが，次第に頻度が増え，昨夜とうとう寝られなくなった．
 
-[Amazon | Easycargo Raspberry Piファン 30x30x7mm Raspberry Pi冷却ファン ブラシレス 3.3V 5V DC 静音ファン Raspberry Pi 4、3 B+、B+、Pi 2、Pi B+、RetroFlag NESPIケース(30mmx30mmx7mm)(ブラック1パック) | Easycargo | ケースファン 通販](https://amzn.asia/d/dWmVpZI)
+[Amazon \| Easycargo Raspberry Piファン 30x30x7mm Raspberry Pi冷却ファン ブラシレス 3.3V 5V DC 静音ファン Raspberry Pi 4、3 B+、B+、Pi 2、Pi B+、RetroFlag NESPIケース(30mmx30mmx7mm)(ブラック1パック) \| Easycargo \| ケースファン 通販](https://amzn.asia/d/dWmVpZI)
 
 ![](https://m.media-amazon.com/images/I/615Cw3iGtVL._SX522_.jpg)
 
 ファン自体は購入していたが，後回しになっていたのは理由がある．**接続できないのだ**
 
-![61N4-xehpFL._SX522_.jpg|415](https://m.media-amazon.com/images/I/61N4-xehpFL._SX522_.jpg)
+![](https://m.media-amazon.com/images/I/61N4-xehpFL._SX522_.jpg)
 
 この形状の端子をXAコネクター端子と呼ぶらしいが，元のファンはこの端子だが，購入した方は黒い端子が邪魔している．
 
@@ -23,11 +23,11 @@ PiKVMで運用している Raspberry Pi 4 の最初からついていたファ�
 
 諦めて別のファンを購入するかとAmazonを探せど見つからない．しかしその時類似品に別の製品だが興味深い画像があった．
 
-![615Cw3iGtVL._SX522_.jpg|421](https://m.media-amazon.com/images/I/615Cw3iGtVL._SX522_.jpg)
+![](https://m.media-amazon.com/images/I/615Cw3iGtVL._SX522_.jpg)
 
 Raspberry Piの基盤から出ている電源端子に接続するという発想がなかった．元のファンと同じ端子を探すことに執着していたし，定格電流も同じものを探さないといけないと思っていた．
 
-![https://tool-lab.com/wp-content/uploads/2022/05/raspberrypi-node-red-17_gpio-numbering.png](https://tool-lab.com/wp-content/uploads/2022/05/raspberrypi-node-red-17_gpio-numbering.png)
+![](https://tool-lab.com/wp-content/uploads/2022/05/raspberrypi-node-red-17_gpio-numbering.png)
 
 > GPIOの5Vピンで利用できる電流上限は、理論的には
 「電源アダプタの供給電流」 −「ラズベリーパイ本体の消費電流」
@@ -39,11 +39,11 @@ Raspberry Piの基盤から出ている電源端子に接続するという発�
 また、公式サイトで販売されているタッチディスプレイもGPIOコネクタの「5V」ピンに接続して使用します。このディスプレイの場合は550mA程度消費するようです。ただ、550mA程度使用する場合は電源アダプタはかなり余裕のあるものが必要と思われます。
 一般に入手できる電源アダプタの場合はCPUファン程度、つまり100mA程度で利用するのが安全と思われます。
 
-[第17回 GPIOの電源ピン | ツール・ラボ](https://tool-lab.com/raspberrypi-node-red-17/#index_id6)
+[第17回 GPIOの電源ピン \| ツール・ラボ](https://tool-lab.com/raspberrypi-node-red-17/#index_id6)
 
 というわけで，実際に接続してみるとこれはうまくいった．これでまた再び静かな夜を過ごせそうである．
 
-![[Raspberry Pi のCPUファンを換装した-20241108064411298.jpg|536]]
+![[Raspberry Pi のCPUファンを換装した-20241108064411298.jpg]]
 
 中央がやかましくなった不要なファン．右上に取り付けてあるのが今回取り付けたファン．ファンの右下にある白いXAコネクター端子に最初接続されていたため，ここに繋ぐことに固執していたが，基板側端子から電源を取ることで解決した．
 
