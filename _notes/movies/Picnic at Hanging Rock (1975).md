@@ -5,6 +5,8 @@ tags: []
 publish: true
 feed: show
 ---
+[Picnic at Hanging Rock (1975) \[1080p\] \[BluRay\] \[5.1\] \[YTS.MX\] : Free Download, Borrow, and Streaming : Internet Archive](https://archive.org/details/nAzq5LORjmZSfIkJoJO2NwJh0bscjTX54pMHQic0EKfNsOSFBGkYxZDONmnoDFXp)
+
 背景、映像美などは言うに及ばず言いたいことが山程あるが、あのhanging rockの古代的ミステリーによる集団催眠と、その後のミランダのトランス、ボーイスカウト？か何かのミカエルについて焦点を当てて、僕の些末な個人的体験について語るのが良いやろう。
 
 1900年というまだ19世紀の香りも残るこの時代の、しかもオーストラリアなら科学リテラシーはイギリスの19世紀中頃ぐらいでもおかしくない。オスカー・ワイルド夫人が秘密結社に入り、空前のオカルトブームが起きた時代。
@@ -21,6 +23,6 @@ feed: show
 
 Garden of the Gods の岩山たち
 
-![[Picnic at Hanging Rock (1975)-20250119221523076.jpg]]
+![[../../assets/img/Public/Picnic at Hanging Rock (1975)-20250119221523076.jpg]]
 
-![[Picnic at Hanging Rock (1975)-20250119221531821.jpg]]
+![[../../assets/img/Public/Picnic at Hanging Rock (1975)-20250119221531821.jpg]]
