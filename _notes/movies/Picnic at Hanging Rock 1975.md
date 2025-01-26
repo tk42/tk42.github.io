@@ -22,7 +22,6 @@ feed: show
 古代脳解明のヒントに岩座はあるかもしれん。そんな気がした。
 
 Garden of the Gods の岩山たち
+![](Picnic%20at%20Hanging%20Rock-20250119221523076.jpg)
 
-![[../../assets/img/Public/Picnic at Hanging Rock (1975)-20250119221523076.jpg]]
-
-![[../../assets/img/Public/Picnic at Hanging Rock (1975)-20250119221531821.jpg]]
+![](../../assets/img/Public/Picnic%20at%20Hanging%20Rock-20250119221531821.jpg)
