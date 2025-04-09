@@ -21,7 +21,8 @@
   "smart_view_filter": {
     "render_markdown": true,
     "show_full_path": false,
-    "results_limit": "20"
+    "results_limit": "20",
+    "exclude_filter": ""
   },
   "smart_notices": {
     "muted": {}
