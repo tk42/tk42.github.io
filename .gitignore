@@ -7,3 +7,5 @@ _memos/*
 .obsidian
 /*.md
 !./README.md
+.smart-env/*
+
