@@ -22,7 +22,7 @@
     "render_markdown": true,
     "show_full_path": false,
     "results_limit": "20",
-    "exclude_filter": ""
+    "exclude_filter": "_memos/Project/PASSWORD.md"
   },
   "smart_notices": {
     "muted": {}
