@@ -44,7 +44,7 @@ services:
       - caddy_config:/config
 
   openclaw:
-    image: ghcr.io/openclaw/openclaw:latest
+    image: alpine/openclaw:latest
     restart: unless-stopped
     depends_on:
       mattermost:
@@ -56,15 +56,13 @@ services:
       GITHUB_TOKEN: ${GITHUB_TOKEN}
 
     volumes:
-      - ./openclaw/openclaw.json:/root/.openclaw/openclaw.json:ro
-      - ./openclaw/prompts:/root/.openclaw/prompts:ro
-      - ./openclaw/skills:/root/.openclaw/skills:ro
+      - ./openclaw/openclaw.json:/home/node/.openclaw/openclaw.json:ro
+      - ./openclaw/prompts:/home/node/.openclaw/prompts:ro
+      - ./openclaw/skills:/home/node/.openclaw/skills:ro
       - ../data:/data
-      - openclaw_data:/root/.openclaw/data
+      - openclaw_data:/home/node/.openclaw/data
       - /var/run/docker.sock:/var/run/docker.sock
-    command: >
-      sh -c "openclaw plugins install @openclaw/mattermost &&
-             openclaw gateway --verbose"
+    command: ["node", "/app/openclaw.mjs", "gateway", "--verbose"]
 
 volumes:
   postgres_data:
