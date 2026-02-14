@@ -3,9 +3,9 @@ name: url-reader
 description: Read and summarize content from URLs shared in chat
 ---
 
-**IMPORTANT: This skill MUST be applied automatically whenever a URL (http:// or https://) is detected in any user message. Do NOT attempt to fetch URLs directly — always apply the domain rewriting rules below first.**
+**IMPORTANT: This skill MUST be applied automatically whenever a URL (http:// or https://) is detected in any user message.**
 
-When a user shares a URL, use the `web_fetch` tool to retrieve its content and provide a summary.
+Fetch the URL content and summarize it in Japanese.
 
 ## Special handling for blocked sites
 
@@ -16,25 +16,37 @@ Some sites block direct fetch. Use these proxy/alternative URLs:
 | `x.com`         | `fixupx.com`    | Twitter/X embed-friendly proxy |
 | `twitter.com`   | `fxtwitter.com` | Same as above                  |
 
-### Example
+## Fetch strategy (preferred order)
 
-- User posts: `https://x.com/user/status/123456`
-- Fetch: `https://fixupx.com/user/status/123456`
+1. **Try `web_fetch`** if it is available in the runtime.
+2. **Fallback: use `exec` + `curl -L`** to retrieve content.
+
+### Qiita-specific tip
+
+Qiita articles often expose raw Markdown by appending `.md`:
+
+- `https://qiita.com/<user>/items/<id>` → try `https://qiita.com/<user>/items/<id>.md`
+
+When the domain is `qiita.com` and the path matches `/items/<id>`, try the `.md` URL first.
 
 ## Workflow
 
-1. Detect URL(s) in the user's message
-2. If the domain matches a blocked site, rewrite the URL using the table above
-3. Use `web_fetch` to retrieve the content
-4. Summarize the content in Japanese, including:
-   - 投稿者名
-   - 本文の要約
-   - 画像があれば説明
+1. Detect URL(s) in the user's message.
+2. Rewrite blocked domains using the table above.
+3. Fetch content:
+   - First try `web_fetch`.
+   - If it fails or is unavailable, run:
+     - `curl -L -sS <url>`
+     - If the output looks like HTML and the site provides a Markdown endpoint (e.g., Qiita `.md`), try that.
+4. Summarize in Japanese, including:
+   - 投稿者名（分かる範囲で）
+   - 本文の要約（箇条書き推奨）
    - 重要なリンクや引用
-5. If `web_fetch` fails even with the proxy, inform the user and ask them to paste the text directly
+   - 画像があれば説明
+5. If you still cannot fetch content (paywall/blocked), ask the user to paste the text.
 
 ## Notes
 
-- Always attempt to fetch before saying "読めない"
-- For paywalled sites (e.g., Nikkei, WSJ), inform the user that the content is behind a paywall
-- For PDF links, use `web_fetch` directly — most PDFs are accessible
+- Always attempt to fetch before saying「読めない」
+- For paywalled sites (e.g., Nikkei, WSJ), state that it is paywalled
+- For PDFs, try fetching directly (often accessible)
