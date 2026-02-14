@@ -64,10 +64,7 @@ services:
 
     volumes:
       - ../data:/data
-      - openclaw_data:/home/openclaw/.openclaw
-      - ./openclaw/openclaw.json:/home/openclaw/.openclaw/openclaw.json
-      - ./openclaw/prompts:/home/openclaw/.openclaw/prompts
-      - ./openclaw/skills:/home/openclaw/.openclaw/skills
+      - ./openclaw:/home/openclaw/.openclaw
       - /var/run/docker.sock:/var/run/docker.sock
     command: node /app/openclaw.mjs gateway --verbose
 
@@ -77,4 +74,3 @@ volumes:
   mattermost_config:
   caddy_data:
   caddy_config:
-  openclaw_data:

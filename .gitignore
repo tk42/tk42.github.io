@@ -12,6 +12,13 @@ infra/*.tfvars
 
 # Apps
 apps/.env
+apps/openclaw/agents/
+apps/openclaw/cron/
+apps/openclaw/logs/
+apps/openclaw/sessions/
+apps/openclaw/canvas/
+apps/openclaw/openclaw.json.bak*
+apps/openclaw/update-check.json
 
 # OS
 .DS_Store
