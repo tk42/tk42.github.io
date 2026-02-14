@@ -47,6 +47,9 @@ When the domain is `qiita.com` and the path matches `/items/<id>`, try the `.md`
 
 ## Notes
 
+- If you create any intermediate/downloaded files, do **not** write them to `/data/` root.
+  - Prefer: `/data/idea/_sources/` for idea-channel work.
+  - Create the directory if needed.
 - Always attempt to fetch before saying「読めない」
 - For paywalled sites (e.g., Nikkei, WSJ), state that it is paywalled
 - For PDFs, try fetching directly (often accessible)
