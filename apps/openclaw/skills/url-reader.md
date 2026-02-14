@@ -1,6 +1,7 @@
 ---
 name: url-reader
 description: Read and summarize content from URLs shared in chat
+trigger: "https?://"
 ---
 
 When a user shares a URL, use the `web_fetch` tool to retrieve its content and provide a summary.
@@ -9,10 +10,10 @@ When a user shares a URL, use the `web_fetch` tool to retrieve its content and p
 
 Some sites block direct fetch. Use these proxy/alternative URLs:
 
-| Original domain         | Replace with              | Notes                          |
-| ----------------------- | ------------------------- | ------------------------------ |
-| `x.com`                 | `fixupx.com`              | Twitter/X embed-friendly proxy |
-| `twitter.com`           | `fxtwitter.com`           | Same as above                  |
+| Original domain | Replace with    | Notes                          |
+| --------------- | --------------- | ------------------------------ |
+| `x.com`         | `fixupx.com`    | Twitter/X embed-friendly proxy |
+| `twitter.com`   | `fxtwitter.com` | Same as above                  |
 
 ### Example
 
