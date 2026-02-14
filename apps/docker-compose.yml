@@ -68,9 +68,7 @@ services:
       - ./openclaw/prompts:/root/.openclaw/prompts
       - ./openclaw/skills:/root/.openclaw/skills
       - /var/run/docker.sock:/var/run/docker.sock
-    command: >
-      sh -c "mkdir -p /root/.openclaw &&
-             node /app/openclaw.mjs gateway --verbose"
+    command: node /app/openclaw.mjs gateway --verbose
 
 volumes:
   postgres_data:
