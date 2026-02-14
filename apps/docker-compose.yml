@@ -56,14 +56,17 @@ services:
       GITHUB_TOKEN: ${GITHUB_TOKEN}
 
     volumes:
-      - ./openclaw/openclaw.json:/home/node/.openclaw/openclaw.json:ro
-      - ./openclaw/prompts:/home/node/.openclaw/prompts:ro
-      - ./openclaw/skills:/home/node/.openclaw/skills:ro
+      - ./openclaw/openclaw.json:/tmp/openclaw.json:ro
+      - ./openclaw/prompts:/tmp/prompts:ro
+      - ./openclaw/skills:/tmp/skills:ro
       - ../data:/data
-      - openclaw_data:/home/node/.openclaw/data
+      - openclaw_data:/home/node/.openclaw
       - /var/run/docker.sock:/var/run/docker.sock
     command: >
-      sh -c "node /app/openclaw.mjs plugins install ./extensions/mattermost &&
+      sh -c "cp /tmp/openclaw.json /home/node/.openclaw/openclaw.json &&
+             cp -r /tmp/prompts /home/node/.openclaw/prompts &&
+             cp -r /tmp/skills /home/node/.openclaw/skills &&
+             node /app/openclaw.mjs plugins install ./extensions/mattermost &&
              node /app/openclaw.mjs gateway --verbose"
 
 volumes:
