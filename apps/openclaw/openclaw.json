@@ -16,7 +16,12 @@
       "dmPolicy": "open",
       "allowFrom": ["*"],
       "groupPolicy": "open",
-      "requireMention": false
+      "requireMention": false,
+      "groups": {
+        "*": {
+          "requireMention": false
+        }
+      }
     }
   },
   "tools": {
