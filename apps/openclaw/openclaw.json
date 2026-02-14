@@ -17,6 +17,7 @@
       "allowFrom": ["*"],
       "groupPolicy": "open",
       "requireMention": false,
+      "replyToMode": "all",
       "groups": {
         "*": {
           "requireMention": false
