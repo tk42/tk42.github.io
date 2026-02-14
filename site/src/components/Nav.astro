@@ -1,0 +1,77 @@
+---
+const navLinks = [
+  { href: "/about", label: "About" },
+  { href: "/memos", label: "Memos" },
+  { href: "/notes", label: "Notes" },
+  { href: "https://github.com/tk42", label: "Github", external: true },
+  {
+    href: "https://www.instagram.com/tk____42",
+    label: "Instagram",
+    external: true,
+  },
+  {
+    href: "https://www.linkedin.com/in/tadashi-kojima-97bb0b9b/",
+    label: "Linkedin",
+    external: true,
+  },
+];
+---
+
+<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" style="padding-left: 0;" href="/">
+      <h6>tk42</h6>
+    </a>
+    <div
+      class="navbar-item navbar-dark-mode__mobile is-hidden-tablet"
+      onclick="modeSwitcher()"
+    >
+      <div class="buttons">
+        <a class="button is-text">
+          <span class="icon is-small">
+            <img src="/sun.svg" class="theme-toggle-img" />
+          </span>
+        </a>
+      </div>
+    </div>
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarMenu"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-start">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="navbar-item"
+            target={link.external ? "_blank" : undefined}
+            rel={link.external ? "noopener noreferrer" : undefined}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+    <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-text">
+            <span class="icon is-small">
+              <img src="/sun.svg" class="theme-toggle-img" />
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,43 @@
+---
+interface FeedEntry {
+  title: string;
+  url: string;
+  excerpt?: string;
+  date?: string;
+}
+
+interface Props {
+  entries: FeedEntry[];
+  format?: "card" | "row";
+}
+
+const { entries, format = "card" } = Astro.props;
+---
+
+{
+  format === "card" ? (
+    <div class="related-wrapper">
+      {entries.map((entry) => (
+        <div class="notelist-feed">
+          <a href={entry.url}>
+            <h6>{entry.title}</h6>
+            <p class="excerpt">{entry.excerpt}</p>
+          </a>
+        </div>
+      ))}
+    </div>
+  ) : (
+    <div class="block">
+      {entries.map((entry) => (
+        <div class="list-feed">
+          <a
+            href={entry.url}
+            style="text-decoration: none; display: flex; justify-content: space-between; flex-direction: row; width: 100%;"
+          >
+            <div class="writinglist-title">{entry.title}</div>
+          </a>
+        </div>
+      ))}
+    </div>
+  )
+}

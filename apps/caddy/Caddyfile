@@ -1,0 +1,3 @@
+chat.tk42.jp {
+    reverse_proxy mattermost:8065
+}

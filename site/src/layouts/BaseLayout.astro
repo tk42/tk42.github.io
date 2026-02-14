@@ -1,0 +1,97 @@
+---
+import Nav from "@/components/Nav.astro";
+import Footer from "@/components/Footer.astro";
+import "@/styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Memos and Notes" } = Astro.props;
+const siteTitle = "tk42";
+const pageTitle = title ? `${title} - ${siteTitle}` : siteTitle;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:site_name" content={siteTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={title ? "article" : "website"} />
+    <meta property="og:url" content={Astro.url.href} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>{pageTitle}</title>
+    <link rel="canonical" href={Astro.url.href} />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="16x16" />
+    <!-- KaTeX -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main>
+      <Nav />
+      <section class="section">
+        <div class="columns is-centered">
+          <slot />
+        </div>
+      </section>
+      <Footer />
+    </main>
+    <script>
+      // Dark mode switcher
+      const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+      let theme = sessionStorage.getItem("theme");
+
+      function applyTheme(mode: string) {
+        document.documentElement.setAttribute("data-theme", mode);
+        const icon = mode === "dark" ? "/moon.svg" : "/sun.svg";
+        document
+          .querySelectorAll(".theme-toggle-img")
+          .forEach((el) => ((el as HTMLImageElement).src = icon));
+      }
+
+      if (theme === "dark") applyTheme("dark");
+      else if (theme === "light") applyTheme("light");
+      else if (systemDark.matches) applyTheme("dark");
+
+      systemDark.addEventListener("change", (e) => {
+        if (!sessionStorage.getItem("theme")) {
+          applyTheme(e.matches ? "dark" : "light");
+        }
+      });
+
+      (window as any).modeSwitcher = () => {
+        const current =
+          sessionStorage.getItem("theme") ||
+          (systemDark.matches ? "dark" : "light");
+        const next = current === "dark" ? "light" : "dark";
+        sessionStorage.setItem("theme", next);
+        applyTheme(next);
+      };
+
+      // Hamburger menu
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".navbar-burger").forEach((el) => {
+          el.addEventListener("click", () => {
+            const target = document.getElementById(
+              (el as HTMLElement).dataset.target!,
+            );
+            el.classList.toggle("is-active");
+            target?.classList.toggle("is-active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

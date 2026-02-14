@@ -1,0 +1,115 @@
+---
+// Pagefind search component — JS is loaded at runtime from the built index.
+---
+
+<div id="search" class="search-container">
+  <div id="search__input-wrapper">
+    <input
+      id="search__input"
+      type="text"
+      placeholder="Search..."
+      autocomplete="off"
+    />
+  </div>
+  <div id="search__results"></div>
+</div>
+
+<style>
+  .search-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+  }
+
+  #search__input {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: var(--text-s);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  #search__input:focus {
+    border-color: var(--color-text-link);
+  }
+
+  #search__results {
+    margin-top: 0.5rem;
+  }
+
+  :global(.search-result) {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  :global(.search-result a) {
+    color: var(--color-text-link);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  :global(.search-result a:hover) {
+    text-decoration: underline;
+  }
+
+  :global(.search-result p) {
+    font-size: var(--text-s);
+    color: var(--color-text-sub);
+    margin: 0.2rem 0 0;
+  }
+</style>
+
+<script is:inline>
+  (async function initPagefind() {
+    var input = document.getElementById("search__input");
+    var resultsContainer = document.getElementById("search__results");
+    if (!input) return;
+
+    var pagefind;
+    try {
+      pagefind = await import("/pagefind/pagefind.js");
+      await pagefind.init();
+    } catch (e) {
+      input.placeholder = "Search (available after build)";
+      input.disabled = true;
+      return;
+    }
+
+    var debounceTimer;
+
+    input.addEventListener("input", function () {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(async function () {
+        var query = input.value.trim();
+        resultsContainer.innerHTML = "";
+
+        if (!query) return;
+
+        var search = await pagefind.search(query);
+        var results = await Promise.all(
+          search.results.slice(0, 10).map(function (r) { return r.data(); })
+        );
+
+        if (results.length === 0) {
+          resultsContainer.innerHTML =
+            '<p style="color: var(--color-text-sub);">No results found.</p>';
+          return;
+        }
+
+        for (var i = 0; i < results.length; i++) {
+          var result = results[i];
+          var div = document.createElement("div");
+          div.className = "search-result";
+          div.innerHTML =
+            '<a href="' + result.url + '">' + (result.meta && result.meta.title || result.url) + '</a>' +
+            '<p>' + (result.excerpt || '') + '</p>';
+          resultsContainer.appendChild(div);
+        }
+      }, 200);
+    });
+  })();
+</script>

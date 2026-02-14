@@ -1,0 +1,71 @@
+{
+  "models": {
+    "default": "anthropic:claude-sonnet-4-20250514"
+  },
+  "tools": {
+    "profile": "coding",
+    "allow": [
+      "group:fs",
+      "group:runtime",
+      "web_fetch",
+      "group:memory",
+      "image",
+      "group:sessions"
+    ],
+    "deny": [
+      "nodes",
+      "canvas",
+      "llm_task",
+      "lobster"
+    ]
+  },
+  "approvals": {
+    "exec": {
+      "enabled": true
+    }
+  },
+  "tools.exec": {
+    "security": "allowlist",
+    "allowlist": ["grep", "find", "cat", "head", "wc", "ls", "docker", "curl"]
+  },
+  "tools.web": {
+    "search": {
+      "enabled": false
+    },
+    "fetch": {
+      "enabled": true
+    }
+  },
+  "skills": {
+    "allowBundled": [
+      "github",
+      "summarize",
+      "session-logs",
+      "clawhub",
+      "healthcheck"
+    ],
+    "load": {
+      "extraDirs": ["./skills"]
+    }
+  },
+  "plugins": {
+    "entries": {
+      "mattermost": {
+        "enabled": true,
+        "config": {
+          "botToken": "${MATTERMOST_BOT_TOKEN}",
+          "baseUrl": "${MATTERMOST_URL}",
+          "chatmode": "onmessage",
+          "dmPolicy": "open",
+          "allowFrom": ["*"],
+          "groupPolicy": "open"
+        }
+      }
+    }
+  },
+  "github": {
+    "repo": "tk42/tk42.github.io",
+    "branch": "main",
+    "autoCommit": true
+  }
+}

@@ -1,0 +1,53 @@
+name: Deploy Astro site
+
+on:
+  push:
+    branches: [main]
+    paths: ["site/**", "data/memos/**", "data/notes/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+          cache-dependency-path: site/yarn.lock
+
+      - name: Sync public content
+        run: |
+          rsync -a --delete --exclude='.DS_Store' data/memos/ site/src/content/memos/
+          rsync -a --delete --exclude='.DS_Store' data/notes/ site/src/content/notes/
+
+      - name: Install
+        working-directory: site
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        working-directory: site
+        run: yarn build
+
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

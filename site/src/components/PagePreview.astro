@@ -1,0 +1,28 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  excerpt?: string;
+}
+
+const { href, title, excerpt } = Astro.props;
+---
+
+<span class="tooltip">
+  <a href={href}><slot />{!Astro.slots.has("default") && title}</a>
+  {excerpt && (
+    <span class="right">
+      <strong>{title}</strong>
+      <br />
+      <span class="preview-excerpt">{excerpt}</span>
+    </span>
+  )}
+</span>
+
+<style>
+  .preview-excerpt {
+    font-size: var(--text-s);
+    color: var(--color-text-sub);
+    line-height: var(--text-leading-normal);
+  }
+</style>

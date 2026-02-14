@@ -1,0 +1,33 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Feed from "@/components/Feed.astro";
+import { getCollection } from "astro:content";
+
+const allMemos = await getCollection("memos");
+const sortedMemos = allMemos
+  .filter((m) => m.data.feed === "show")
+  .sort((a, b) => {
+    const da = a.data.date || "";
+    const db = b.data.date || "";
+    return db.localeCompare(da);
+  });
+
+const entries = sortedMemos.map((memo) => ({
+  title: memo.data.title,
+  url: `/memos/${memo.slug}`,
+  excerpt: memo.body
+    ?.replace(/\[\[/g, "")
+    .replace(/\]\]/g, "")
+    .replace(/<[^>]*>/g, "")
+    .replace(/-/g, "")
+    .slice(0, 200),
+}));
+---
+
+<BaseLayout title="Memos">
+  <div class="column is-8-widescreen is-10-desktop is-10-tablet is-12-mobile">
+    <h5 class="meta-title"><a href="/">← Home</a></h5>
+    <div class="jumbo">Memos</div>
+    <Feed entries={entries} format="card" />
+  </div>
+</BaseLayout>

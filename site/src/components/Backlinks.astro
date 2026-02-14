@@ -1,0 +1,62 @@
+---
+import { getCollection } from "astro:content";
+
+interface Props {
+  title: string;
+  currentUrl: string;
+}
+
+const { title, currentUrl } = Astro.props;
+
+const allNotes = await getCollection("notes");
+const allMemos = await getCollection("memos");
+const allEntries = [...allNotes, ...allMemos];
+
+const wikiLinkExact = `[[${title}]]`;
+const wikiLinkAlias = `[[${title}|`;
+
+const backlinks = allEntries.filter((entry) => {
+  const entryUrl =
+    entry.collection === "notes"
+      ? `/notes/${entry.slug}`
+      : `/memos/${entry.slug}`;
+  if (entryUrl === currentUrl) return false;
+  return entry.body?.includes(wikiLinkExact) || entry.body?.includes(wikiLinkAlias);
+});
+---
+
+{
+  backlinks.length > 0 && (
+    <div class="related" id="backlinks">
+      <h5 class="meta-title centre-title">Links to this note</h5>
+      <div class="related-wrapper">
+        {backlinks.map((entry) => {
+          const url =
+            entry.collection === "notes"
+              ? `/notes/${entry.slug}`
+              : `/memos/${entry.slug}`;
+          const excerpt = entry.body
+            ?.replace(/\[\[/g, "")
+            .replace(/\]\]/g, "")
+            .replace(/<[^>]*>/g, "")
+            .replace(/-/g, "")
+            .slice(0, 100);
+          return (
+            <div class="related-group">
+              <a href={url}>
+                <h6>{entry.data.title}</h6>
+                <p
+                  class="excerpt"
+                  style="margin: 0px; color: var(--color-text-main) !important;"
+                >
+                  {excerpt}
+                </p>
+              </a>
+            </div>
+          );
+        })}
+      </div>
+      <br />
+    </div>
+  )
+}
