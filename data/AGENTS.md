@@ -44,10 +44,21 @@ When you receive a message from a Mattermost channel, determine which channel it
 
 **Before answering ANY question or processing ANY content**, search the personal knowledge base at `/data/` for related existing content. This is critical — your value comes from connecting new information to existing knowledge.
 
-Use the `knowledge-search` skill or `exec` tool:
+Use the `knowledge-search` skill or `exec` tool. **Search scope depends on the channel:**
+
+| Channel     | Search directories                |
+| ----------- | --------------------------------- |
+| `memos`     | `/data/memos/`                    |
+| `note`      | `/data/notes/`                    |
+| `idea`      | `/data/memos/ /data/idea/`        |
+| `project`   | `/data/project/ /data/idea/`      |
+| `contracts` | `/data/project/ /data/contracts/` |
+| DM          | `/data/` (all)                    |
+
+Example:
 
 ```
-grep -ril "<keyword>" /data/memos/ /data/notes/
+grep -ril "<keyword>" /data/project/ /data/idea/
 ```
 
 Then read relevant files with `cat` and reference them in your response.

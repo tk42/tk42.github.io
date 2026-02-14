@@ -26,9 +26,18 @@ Use the `exec` tool to search files when the user asks about their notes, memos,
 | `notes/`     | public     | Blog articles (books, tech, thoughts, etc.)      |
 | `template/`  | public     | Note templates                                   |
 
-## Privacy rules
+## Channel-specific search scope
 
-- **DM conversations**: You may return content from ALL categories including private ones.
-- **Group/channel conversations**: Only return content from public categories (`memos/`, `notes/`, `template/`). Never expose private data in group chats.
+Each channel has a defined search scope. Only search within the allowed directories:
+
+| Channel     | Allowed directories      |
+| ----------- | ------------------------ |
+| `memos`     | `memos/`                 |
+| `note`      | `notes/`                 |
+| `idea`      | `memos/`, `idea/`        |
+| `project`   | `project/`, `idea/`      |
+| `contracts` | `project/`, `contracts/` |
+| DM          | ALL directories          |
+
 - When returning results, include the file path and a brief excerpt.
 - If multiple results are found, summarize them and ask which one the user wants to read in detail.
