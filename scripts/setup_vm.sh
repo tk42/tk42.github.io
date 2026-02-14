@@ -2,7 +2,7 @@
 set -euo pipefail
 
 BRAIN_DIR="/opt/brain"
-BUCKET="llm-server-447708-brain-private"
+GCS_SYNC="${BRAIN_DIR}/scripts/gcs-sync.sh"
 
 # Install Docker CE
 curl -fsSL https://get.docker.com | sh
@@ -30,22 +30,22 @@ fi
 sudo mkdir -p "${BRAIN_DIR}/data/{idea,project,contracts}"
 sudo mkdir -p "${BRAIN_DIR}/data/export"
 
+# Make scripts executable
+chmod +x "${BRAIN_DIR}/scripts/"*.sh
+
 # Pull private data from GCS
 # NOTE: VM must have a service account with Storage Object Viewer role on the bucket,
 #       or run `gcloud auth login` / `gcloud auth activate-service-account` first.
 echo "Pulling private data from GCS..."
-bash "${BRAIN_DIR}/scripts/pull_from_gcs.sh" "${BRAIN_DIR}/data" "$BUCKET"
-
-# Make scripts executable
-chmod +x "${BRAIN_DIR}/scripts/"*.sh
+bash "$GCS_SYNC" pull "${BRAIN_DIR}/data"
 
 # Register cron jobs (pull hourly, backup daily at 3am, export daily at 4am)
-CRON_PULL="0 * * * * ${BRAIN_DIR}/scripts/pull_from_gcs.sh ${BRAIN_DIR}/data ${BUCKET} >> /var/log/brain-pull.log 2>&1"
-CRON_BACKUP="0 3 * * * ${BRAIN_DIR}/scripts/backup_private.sh ${BUCKET} >> /var/log/brain-backup.log 2>&1"
-CRON_EXPORT="0 4 * * * ${BRAIN_DIR}/scripts/export_private_zip.sh ${BRAIN_DIR}/data ${BRAIN_DIR}/data/export >> /var/log/brain-export.log 2>&1"
+CRON_PULL="0 * * * * ${GCS_SYNC} pull ${BRAIN_DIR}/data >> /var/log/brain-pull.log 2>&1"
+CRON_BACKUP="0 3 * * * ${GCS_SYNC} push --delete ${BRAIN_DIR}/data >> /var/log/brain-backup.log 2>&1"
+CRON_EXPORT="0 4 * * * ${GCS_SYNC} export ${BRAIN_DIR}/data ${BRAIN_DIR}/data/export >> /var/log/brain-export.log 2>&1"
 
 # Install cron jobs (idempotent)
-( crontab -l 2>/dev/null | grep -v "brain-pull\|brain-backup\|brain-export\|pull_from_gcs\|backup_private\|export_private_zip"; \
+( crontab -l 2>/dev/null | grep -v "gcs-sync\|brain-pull\|brain-backup\|brain-export"; \
   echo "$CRON_PULL"; echo "$CRON_BACKUP"; echo "$CRON_EXPORT" ) | crontab -
 
 echo "✅ Cron jobs registered."
