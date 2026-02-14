@@ -49,7 +49,7 @@ services:
 
   openclaw:
     image: alpine/openclaw:latest
-    user: "0:0"
+    user: "${OPENCLAW_UID:-0}:${OPENCLAW_GID:-0}"
     restart: unless-stopped
     depends_on:
       mattermost:
@@ -63,16 +63,13 @@ services:
 
     volumes:
       - ./openclaw/openclaw.json:/tmp/openclaw.json:ro
-      - ./openclaw/prompts:/tmp/prompts:ro
-      - ./openclaw/skills:/tmp/skills:ro
       - ../data:/data
       - openclaw_data:/root/.openclaw
+      - ./openclaw/prompts:/root/.openclaw/prompts
+      - ./openclaw/skills:/root/.openclaw/skills
       - /var/run/docker.sock:/var/run/docker.sock
     command: >
       sh -c "cp /tmp/openclaw.json /root/.openclaw/openclaw.json &&
-             rm -rf /root/.openclaw/prompts /root/.openclaw/skills &&
-             cp -r /tmp/prompts /root/.openclaw/prompts &&
-             cp -r /tmp/skills /root/.openclaw/skills &&
              node /app/openclaw.mjs gateway --verbose"
 
 volumes:
