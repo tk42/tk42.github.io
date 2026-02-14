@@ -58,6 +58,7 @@ ssh connection
 
 ```bash
 gcloud compute ssh tk42-brain --zone=us-central1-a --project=llm-server-447708
+cd /opt/brain
 ```
 
 ```bash
