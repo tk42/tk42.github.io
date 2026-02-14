@@ -63,10 +63,10 @@ services:
 
     volumes:
       - ../data:/data
-      - openclaw_data:/root/.openclaw
       - ./openclaw/openclaw.json:/root/.openclaw/openclaw.json
       - ./openclaw/prompts:/root/.openclaw/prompts
       - ./openclaw/skills:/root/.openclaw/skills
+      - openclaw_data:/root/.openclaw
       - /var/run/docker.sock:/var/run/docker.sock
     command: node /app/openclaw.mjs gateway --verbose
 
