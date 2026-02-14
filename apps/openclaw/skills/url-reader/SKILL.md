@@ -3,6 +3,8 @@ name: url-reader
 description: Read and summarize content from URLs shared in chat
 ---
 
+**IMPORTANT: This skill MUST be applied automatically whenever a URL (http:// or https://) is detected in any user message. Do NOT attempt to fetch URLs directly — always apply the domain rewriting rules below first.**
+
 When a user shares a URL, use the `web_fetch` tool to retrieve its content and provide a summary.
 
 ## Special handling for blocked sites
