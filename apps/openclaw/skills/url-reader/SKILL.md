@@ -1,7 +1,6 @@
 ---
 name: url-reader
 description: Read and summarize content from URLs shared in chat
-trigger: "https?://"
 ---
 
 When a user shares a URL, use the `web_fetch` tool to retrieve its content and provide a summary.

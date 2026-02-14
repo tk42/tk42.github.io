@@ -58,10 +58,7 @@
       "session-logs",
       "clawhub",
       "healthcheck"
-    ],
-    "load": {
-      "extraDirs": ["/root/.openclaw/skills"]
-    }
+    ]
   },
   "gateway": {
     "mode": "local",

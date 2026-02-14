@@ -66,6 +66,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     command: >
       sh -c "cp /tmp/openclaw.json /root/.openclaw/openclaw.json &&
+             rm -rf /root/.openclaw/prompts /root/.openclaw/skills &&
              cp -r /tmp/prompts /root/.openclaw/prompts &&
              cp -r /tmp/skills /root/.openclaw/skills &&
              node /app/openclaw.mjs gateway --verbose"
