@@ -45,6 +45,7 @@ services:
 
   openclaw:
     image: alpine/openclaw:latest
+    user: "0:0"
     restart: unless-stopped
     depends_on:
       mattermost:
