@@ -58,7 +58,11 @@
       "session-logs",
       "clawhub",
       "healthcheck"
-    ]
+    ],
+    "entries": {
+      "url-reader": { "enabled": true },
+      "knowledge-search": { "enabled": true }
+    }
   },
   "gateway": {
     "mode": "local",
