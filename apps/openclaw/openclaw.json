@@ -15,7 +15,8 @@
       "chatmode": "onmessage",
       "dmPolicy": "open",
       "allowFrom": ["*"],
-      "groupPolicy": "open"
+      "groupPolicy": "open",
+      "requireMention": false
     }
   },
   "tools": {
