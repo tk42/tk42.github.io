@@ -55,6 +55,7 @@ services:
       MATTERMOST_BOT_TOKEN: ${MATTERMOST_BOT_TOKEN}
       MATTERMOST_URL: http://mattermost:8065
       GITHUB_TOKEN: ${GITHUB_TOKEN}
+      OPENCLAW_GATEWAY_TOKEN: ${OPENCLAW_GATEWAY_TOKEN}
 
     volumes:
       - ./openclaw/openclaw.json:/tmp/openclaw.json:ro

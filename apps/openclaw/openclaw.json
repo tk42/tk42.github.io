@@ -58,6 +58,9 @@
     }
   },
   "gateway": {
-    "mode": "local"
+    "mode": "local",
+    "auth": {
+      "token": "${OPENCLAW_GATEWAY_TOKEN}"
+    }
   }
 }
