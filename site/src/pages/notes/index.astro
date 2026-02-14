@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Feed from "@/components/Feed.astro";
+import Search from "@/components/Search.astro";
 import { getCollection } from "astro:content";
 
 const allNotes = await getCollection("notes");
@@ -17,9 +18,10 @@ const entries = sortedNotes.map((note) => ({
 ---
 
 <BaseLayout title="Notes">
-  <div class="column is-8-widescreen is-10-desktop is-10-tablet is-12-mobile">
+  <div class="page-content">
     <h5 class="meta-title"><a href="/">← Home</a></h5>
     <div class="jumbo">Notes</div>
+    <Search />
     <Feed entries={entries} format="row" />
   </div>
 </BaseLayout>

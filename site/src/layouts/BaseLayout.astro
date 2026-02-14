@@ -25,7 +25,7 @@ const pageTitle = title ? `${title} - ${siteTitle}` : siteTitle;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <title>{pageTitle}</title>
@@ -42,7 +42,7 @@ const pageTitle = title ? `${title} - ${siteTitle}` : siteTitle;
     <main>
       <Nav />
       <section class="section">
-        <div class="columns is-centered">
+        <div class="container">
           <slot />
         </div>
       </section>
@@ -82,7 +82,7 @@ const pageTitle = title ? `${title} - ${siteTitle}` : siteTitle;
 
       // Hamburger menu
       document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll(".navbar-burger").forEach((el) => {
+        document.querySelectorAll(".nav-toggle").forEach((el) => {
           el.addEventListener("click", () => {
             const target = document.getElementById(
               (el as HTMLElement).dataset.target!,
