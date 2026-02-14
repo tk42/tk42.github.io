@@ -6,8 +6,11 @@ import { getCollection } from "astro:content";
 
 const allNotes = await getCollection("notes");
 const sortedNotes = allNotes.sort((a, b) => {
-  const da = a.data.date || "";
-  const db = b.data.date || "";
+  const da = a.data.date ?? "";
+  const db = b.data.date ?? "";
+  if (da && !db) return -1;
+  if (!da && db) return 1;
+  if (!da && !db) return 0;
   return db.localeCompare(da);
 });
 
