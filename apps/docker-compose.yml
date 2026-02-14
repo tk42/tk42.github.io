@@ -35,6 +35,9 @@ services:
     restart: unless-stopped
     depends_on:
       - mattermost
+    environment:
+      EXPORT_BASIC_AUTH_USER: ${EXPORT_BASIC_AUTH_USER:-admin}
+      EXPORT_BASIC_AUTH_HASH: ${EXPORT_BASIC_AUTH_HASH}
     ports:
       - "80:80"
       - "443:443"
@@ -42,6 +45,7 @@ services:
       - ./caddy/Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data
       - caddy_config:/config
+      - ../data/export:/srv/export:ro
 
   openclaw:
     image: alpine/openclaw:latest

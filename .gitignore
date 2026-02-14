@@ -20,5 +20,6 @@ apps/.env
 data/idea/
 data/project/
 data/contracts/
+data/export/
 
 
