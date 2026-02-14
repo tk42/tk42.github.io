@@ -64,7 +64,7 @@ services:
 
     volumes:
       - ../data:/data
-      - openclaw_data:/home/openclaw/.openclaw/data
+      - openclaw_data:/home/openclaw/.openclaw
       - ./openclaw/openclaw.json:/home/openclaw/.openclaw/openclaw.json
       - ./openclaw/prompts:/home/openclaw/.openclaw/prompts
       - ./openclaw/skills:/home/openclaw/.openclaw/skills
