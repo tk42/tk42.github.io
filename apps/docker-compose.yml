@@ -61,13 +61,12 @@ services:
       - ./openclaw/prompts:/tmp/prompts:ro
       - ./openclaw/skills:/tmp/skills:ro
       - ../data:/data
-      - openclaw_data:/home/node/.openclaw
+      - openclaw_data:/root/.openclaw
       - /var/run/docker.sock:/var/run/docker.sock
     command: >
-      sh -c "cp /tmp/openclaw.json /home/node/.openclaw/openclaw.json &&
-             cp -r /tmp/prompts /home/node/.openclaw/prompts &&
-             cp -r /tmp/skills /home/node/.openclaw/skills &&
-             node /app/openclaw.mjs plugins install ./extensions/mattermost &&
+      sh -c "cp /tmp/openclaw.json /root/.openclaw/openclaw.json &&
+             cp -r /tmp/prompts /root/.openclaw/prompts &&
+             cp -r /tmp/skills /root/.openclaw/skills &&
              node /app/openclaw.mjs gateway --verbose"
 
 volumes:

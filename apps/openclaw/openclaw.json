@@ -56,5 +56,8 @@
     "load": {
       "extraDirs": ["./skills"]
     }
+  },
+  "gateway": {
+    "mode": "local"
   }
 }
