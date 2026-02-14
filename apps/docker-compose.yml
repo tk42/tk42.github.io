@@ -51,7 +51,7 @@ services:
       mattermost:
         condition: service_started
     environment:
-      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
       MATTERMOST_BOT_TOKEN: ${MATTERMOST_BOT_TOKEN}
       MATTERMOST_URL: http://mattermost:8065
       GITHUB_TOKEN: ${GITHUB_TOKEN}
