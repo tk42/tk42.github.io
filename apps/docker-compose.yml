@@ -55,6 +55,7 @@ services:
       mattermost:
         condition: service_started
     environment:
+      HOME: /home/openclaw
       OPENAI_API_KEY: ${OPENAI_API_KEY}
       MATTERMOST_BOT_TOKEN: ${MATTERMOST_BOT_TOKEN}
       MATTERMOST_URL: http://mattermost:8065
@@ -63,10 +64,10 @@ services:
 
     volumes:
       - ../data:/data
-      - openclaw_data:/root/.openclaw/data
-      - ./openclaw/openclaw.json:/root/.openclaw/openclaw.json
-      - ./openclaw/prompts:/root/.openclaw/prompts
-      - ./openclaw/skills:/root/.openclaw/skills
+      - openclaw_data:/home/openclaw/.openclaw/data
+      - ./openclaw/openclaw.json:/home/openclaw/.openclaw/openclaw.json
+      - ./openclaw/prompts:/home/openclaw/.openclaw/prompts
+      - ./openclaw/skills:/home/openclaw/.openclaw/skills
       - /var/run/docker.sock:/var/run/docker.sock
     command: node /app/openclaw.mjs gateway --verbose
 
