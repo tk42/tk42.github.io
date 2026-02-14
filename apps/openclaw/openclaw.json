@@ -1,6 +1,22 @@
 {
-  "models": {
-    "default": "anthropic:claude-sonnet-4-20250514"
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-sonnet-4-5"
+      },
+      "workspace": "/data"
+    }
+  },
+  "channels": {
+    "mattermost": {
+      "enabled": true,
+      "botToken": "${MATTERMOST_BOT_TOKEN}",
+      "baseUrl": "${MATTERMOST_URL}",
+      "chatmode": "onmessage",
+      "dmPolicy": "open",
+      "allowFrom": ["*"],
+      "groupPolicy": "open"
+    }
   },
   "tools": {
     "profile": "coding",
@@ -14,26 +30,19 @@
     ],
     "deny": [
       "nodes",
-      "canvas",
-      "llm_task",
-      "lobster"
-    ]
-  },
-  "approvals": {
+      "canvas"
+    ],
     "exec": {
-      "enabled": true
-    }
-  },
-  "tools.exec": {
-    "security": "allowlist",
-    "allowlist": ["grep", "find", "cat", "head", "wc", "ls", "docker", "curl"]
-  },
-  "tools.web": {
-    "search": {
-      "enabled": false
+      "backgroundMs": 10000,
+      "timeoutSec": 1800
     },
-    "fetch": {
-      "enabled": true
+    "web": {
+      "search": {
+        "enabled": false
+      },
+      "fetch": {
+        "enabled": true
+      }
     }
   },
   "skills": {
@@ -47,25 +56,5 @@
     "load": {
       "extraDirs": ["./skills"]
     }
-  },
-  "plugins": {
-    "entries": {
-      "mattermost": {
-        "enabled": true,
-        "config": {
-          "botToken": "${MATTERMOST_BOT_TOKEN}",
-          "baseUrl": "${MATTERMOST_URL}",
-          "chatmode": "onmessage",
-          "dmPolicy": "open",
-          "allowFrom": ["*"],
-          "groupPolicy": "open"
-        }
-      }
-    }
-  },
-  "github": {
-    "repo": "tk42/tk42.github.io",
-    "branch": "main",
-    "autoCommit": true
   }
 }

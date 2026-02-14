@@ -62,7 +62,9 @@ services:
       - ../data:/data
       - openclaw_data:/home/node/.openclaw/data
       - /var/run/docker.sock:/var/run/docker.sock
-    command: ["node", "/app/openclaw.mjs", "gateway", "--verbose"]
+    command: >
+      sh -c "node /app/openclaw.mjs plugins install ./extensions/mattermost &&
+             node /app/openclaw.mjs gateway --verbose"
 
 volumes:
   postgres_data:
