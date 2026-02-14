@@ -62,15 +62,13 @@ services:
       OPENCLAW_GATEWAY_TOKEN: ${OPENCLAW_GATEWAY_TOKEN}
 
     volumes:
-      - ./openclaw/openclaw.json:/tmp/openclaw.json:ro
       - ../data:/data
       - openclaw_data:/root/.openclaw
+      - ./openclaw/openclaw.json:/root/.openclaw/openclaw.json
       - ./openclaw/prompts:/root/.openclaw/prompts
       - ./openclaw/skills:/root/.openclaw/skills
       - /var/run/docker.sock:/var/run/docker.sock
-    command: >
-      sh -c "cp /tmp/openclaw.json /root/.openclaw/openclaw.json &&
-             node /app/openclaw.mjs gateway --verbose"
+    command: node /app/openclaw.mjs gateway --verbose
 
 volumes:
   postgres_data:
