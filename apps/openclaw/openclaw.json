@@ -60,7 +60,7 @@
       "healthcheck"
     ],
     "load": {
-      "extraDirs": ["./skills"]
+      "extraDirs": ["/root/.openclaw/skills"]
     }
   },
   "gateway": {
