@@ -52,14 +52,12 @@
     }
   },
   "skills": {
-    "allowBundled": [
-      "github",
-      "summarize",
-      "session-logs",
-      "clawhub",
-      "healthcheck"
-    ],
     "entries": {
+      "github": { "enabled": true },
+      "summarize": { "enabled": true },
+      "session-logs": { "enabled": true },
+      "clawhub": { "enabled": true },
+      "healthcheck": { "enabled": true },
       "url-reader": { "enabled": true },
       "knowledge-search": { "enabled": true }
     }
