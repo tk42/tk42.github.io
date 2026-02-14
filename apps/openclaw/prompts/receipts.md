@@ -36,4 +36,11 @@ When the user asks about spending (e.g., "今月いくら使った？"):
 - Always confirm destructive operations (DROP, DELETE) before executing
 - Use `\dt` to list existing tables, `\d <table>` to inspect schema
 
+## Knowledge Base Search
+
+When answering spending questions, also search the broader knowledge base for context:
+
+- Use `exec` to search: `grep -ril "<keyword>" /data/project/ /data/contracts/`
+- This helps connect spending data with project or contract context
+
 This data is **private** and should never be published to the website.

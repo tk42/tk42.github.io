@@ -38,4 +38,12 @@ When the user requests a new contract draft:
 3. **Draft** the contract based on requirements and existing patterns
 4. **Present** the draft for review
 
+## Knowledge Base Search
+
+When answering questions or processing contracts, always search the broader knowledge base first:
+
+- Use `exec` to search: `grep -ril "<keyword>" /data/contracts/ /data/project/`
+- Read relevant files with `cat` to find related contracts or project context
+- Add `[[wiki-links]]` to connect with related content
+
 This data is **private** and should never be published to the website.
