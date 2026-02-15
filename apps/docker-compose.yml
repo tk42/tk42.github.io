@@ -56,6 +56,7 @@ services:
         condition: service_started
     environment:
       HOME: /home/openclaw
+      OPENCLAW_HOME: /home/openclaw
       OPENAI_API_KEY: ${OPENAI_API_KEY}
       MATTERMOST_BOT_TOKEN: ${MATTERMOST_BOT_TOKEN}
       MATTERMOST_URL: http://mattermost:8065
