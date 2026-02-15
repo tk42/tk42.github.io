@@ -17,6 +17,8 @@ apps/openclaw/cron/
 apps/openclaw/logs/
 apps/openclaw/sessions/
 apps/openclaw/canvas/
+apps/openclaw/identity/
+apps/openclaw/devices/
 apps/openclaw/openclaw.json.bak*
 apps/openclaw/update-check.json
 
