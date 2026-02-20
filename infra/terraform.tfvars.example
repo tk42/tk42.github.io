@@ -1,4 +1,0 @@
-gcp_project_id       = "llm-server-447708"
-gcp_region           = "us-central1"
-gcp_zone             = "us-central1-a"
-machine_type         = "e2-standard-2"

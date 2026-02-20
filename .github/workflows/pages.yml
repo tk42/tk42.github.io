@@ -3,7 +3,7 @@ name: Deploy Astro site
 on:
   push:
     branches: [main]
-    paths: ["site/**", "data/memos/**", "data/notes/**"]
+    paths: ["src/**", "public/**", "astro.config.ts", "package.json"]
   workflow_dispatch:
 
 permissions:
@@ -28,26 +28,19 @@ jobs:
         with:
           node-version: 22
           cache: yarn
-          cache-dependency-path: site/yarn.lock
-
-      - name: Sync public content
-        run: |
-          rsync -a --delete --exclude='.DS_Store' data/memos/ site/src/content/memos/
-          rsync -a --delete --exclude='.DS_Store' data/notes/ site/src/content/notes/
+          cache-dependency-path: yarn.lock
 
       - name: Install
-        working-directory: site
         run: yarn install --frozen-lockfile
 
       - name: Build
-        working-directory: site
         run: yarn build
 
       - uses: actions/configure-pages@v4
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site/dist
+          path: dist
 
       - id: deployment
         uses: actions/deploy-pages@v4

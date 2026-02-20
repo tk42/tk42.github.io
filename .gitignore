@@ -1,34 +1,7 @@
 # Astro
-site/node_modules/
-site/dist/
-site/.astro/
-
-# Terraform
-infra/.terraform/
-infra/*.tfstate
-infra/*.tfstate.backup
-infra/*.tfvars
-!infra/terraform.tfvars.example
-
-# Apps
-apps/.env
-apps/openclaw/agents/
-apps/openclaw/cron/
-apps/openclaw/logs/
-apps/openclaw/sessions/
-apps/openclaw/canvas/
-apps/openclaw/identity/
-apps/openclaw/devices/
-apps/openclaw/openclaw.json.bak*
-apps/openclaw/update-check.json
+node_modules/
+dist/
+.astro/
 
 # OS
 .DS_Store
-
-# Private data (backed up to GCS)
-data/idea/
-data/project/
-data/contracts/
-data/export/
-
-
